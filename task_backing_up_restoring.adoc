@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: task_backing_up_restoring.html 
+keywords: backing up, back up, backup, restore, restoring 
+summary: Cloud Manager vous permet de sauvegarder et de restaurer sa base de données afin de protéger votre configuration et de résoudre les problèmes. 
+---
+= Sauvegarde et restauration de Cloud Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager vous permet de sauvegarder et de restaurer sa base de données afin de protéger votre configuration et de résoudre les problèmes.
+
+
+
+== Sauvegarde de Cloud Manager
+
+Il est recommandé de sauvegarder régulièrement la base de données Cloud Manager. Si vous rencontrez des problèmes, vous pouvez restaurer Cloud Manager à partir d'une sauvegarde précédente.
+
+.Étapes
+. Dans le coin supérieur droit de la console Cloud Manager, cliquez sur la liste déroulante des tâches, puis sélectionnez *Outils*.
+. Cliquez sur *Backup*.
++
+image:screenshot_backup.gif["Capture d'écran : affiche le bouton Sauvegarde dans la page Outils."]
+
+. Lorsque vous y êtes invité, enregistrez le fichier de sauvegarde dans un emplacement sécurisé afin de pouvoir le récupérer au besoin.
+
+
+
+
+== Restauration de Cloud Manager à partir d'une sauvegarde
+
+La restauration de Cloud Manager à partir d'une sauvegarde remplace les données existantes par celles de la sauvegarde.
+
+.Étapes
+. Dans le coin supérieur droit de la console Cloud Manager, cliquez sur la liste déroulante des tâches, puis sélectionnez *Outils*.
+. Cliquez sur *Restaurer*.
+. Cliquez sur *OK* pour confirmer.
+. Sélectionnez la sauvegarde.
+
+
+Cloud Manager restaure la base de données à partir du fichier de sauvegarde.

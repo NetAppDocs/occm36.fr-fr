@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task_provisioning_volume_view.html 
+keywords: NFS volumes, volume view, creating, mounting, provisioning, create, nfs volumes 
+summary: 'Vous pouvez utiliser Cloud Manager pour créer des volumes NFS qui fournissent des fonctionnalités d"entreprise au-dessus du stockage AWS.' 
+---
+= Création et montage de volumes NFS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez utiliser Cloud Manager pour créer des volumes NFS qui fournissent des fonctionnalités d'entreprise au-dessus du stockage AWS.
+
+
+
+== Création de volumes NFS
+
+Vous pouvez créer un volume associé à une seule instance AWS ou à une instance mise en miroir d'une autre instance afin d'assurer une haute disponibilité.
+
+.Étapes
+. Dans l'onglet volumes, cliquez sur *Créer un nouveau volume*.
+. Sur la page Créer un nouveau volume, sélectionnez un type de volume :
++
+[cols="15,85"]
+|===
+| Option | Description 
+
+
+| Créer un volume | Crée un volume associé à une seule instance AWS. 
+
+
+| Créer un volume haute disponibilité | Crée un volume associé à une seule instance AWS et mis en miroir sur une autre instance pour assurer une haute disponibilité en cas de défaillance. Cliquez sur l'icône Infos pour afficher des informations supplémentaires sur les instances requises pour un volume haute disponibilité. 
+|===
+. Si vous avez choisi Créer un volume, spécifiez les détails de votre premier volume, puis cliquez sur *Créer*.
++
+Le tableau suivant décrit les champs pour lesquels vous pouvez avoir besoin de conseils :
+
++
+[cols="15,85"]
+|===
+| Champ | Description 
+
+
+| Taille | La taille maximale du volume dépend de la capacité disponible sur les systèmes de stockage existants. Le provisionnement fin est automatiquement activé sur le volume, ce qui vous permet de créer un volume supérieur au stockage physique actuellement disponible. Au lieu de préallouer de l'espace de stockage, l'espace est alloué à chaque volume lors de l'écriture des données. 
+
+
+| Type de disque AWS  a| 
+Vous devez choisir le disque qui répond à vos besoins en termes de performances et de coûts.
+
+** Les disques SSD à usage général permettent d'équilibrer les coûts et les performances d'un large éventail de charges de travail. La performance est définie en termes d'IOPS.
+** Débit Les disques HDD optimisés sont destinés aux charges de travail fréquemment utilisées qui nécessitent un débit rapide et cohérent à un prix inférieur.
+** Les disques durs à froid sont conçus pour les sauvegardes, ou les données rarement accessibles, car les performances sont très faibles. Tout comme les disques HDD optimisés en termes de débit, les performances sont définies en termes de débit.
+
+
+Pour plus de détails, reportez-vous à http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
+
+|===
++
+L'image suivante montre la page Créer un volume remplie :
+
++
+image:screenshot_volume_view_create.gif["Capture d'écran : affiche la page Créer un nouveau volume remplie."]
+
+. Si vous choisissez Créer un volume HA, spécifiez les détails du volume, puis cliquez sur *Créer*.
++
+Le tableau suivant décrit les champs pour lesquels vous pouvez avoir besoin de conseils :
+
++
+[cols="15,85"]
+|===
+| Champ | Description 
+
+
+| Taille | La taille maximale du volume dépend de la capacité disponible sur les systèmes de stockage existants. Le provisionnement fin est automatiquement activé sur le volume, ce qui vous permet de créer un volume supérieur au stockage physique actuellement disponible. Au lieu de préallouer de l'espace de stockage, l'espace est alloué à chaque volume lors de l'écriture des données. 
+
+
+| Type de disque AWS  a| 
+Vous devez choisir le disque qui répond à vos besoins en termes de performances et de coûts.
+
+** Les disques SSD à usage général permettent d'équilibrer les coûts et les performances d'un large éventail de charges de travail. La performance est définie en termes d'IOPS.
+** Débit Les disques HDD optimisés sont destinés aux charges de travail fréquemment utilisées qui nécessitent un débit rapide et cohérent.
+
+
+Pour plus de détails, reportez-vous à http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
+
+
+
+| Emplacement | Vous devez choisir un VPC qui inclut trois sous-réseaux dans trois zones de disponibilité distinctes. 
+
+
+| Nœuds et médiateur | Dans la mesure du possible, Cloud Manager choisit des zones de disponibilité distinctes pour chaque instance, car il s'agit de la configuration optimale et prise en charge. 
+
+
+| IP flottante | Les adresses IP doivent se trouver en dehors du bloc CIDR pour tous les VPC de la région. 
+
+
+| Table de routage | Si vous disposez de plusieurs tables de routage, il est très important de sélectionner les tables de routage correctes. Dans le cas contraire, certains clients n'ont peut-être pas accès à la paire haute disponibilité. Pour plus de détails, reportez-vous à  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentation AWS : tables de routage"^]. 
+|===
++
+L'image suivante montre la page Noeuds and Mediator. Chaque instance se trouve dans une zone de disponibilité distincte.
+
++
+image:screenshot_volume_view_ha_network.gif["Capture d'écran : affiche les sélections de mise en réseau AWS pour les deux nœuds Cloud Volumes ONTAP et le médiateur. Chaque instance se trouve dans une zone de disponibilité et un sous-réseau distincts."]
+
+
+
+Cloud Manager crée le volume sur un système existant ou sur un nouveau système. Si un nouveau système est nécessaire, la création du volume peut prendre environ 25 minutes.
+
+
+
+== Montage de volumes sur des hôtes Linux
+
+Après avoir créé un volume, vous devez le monter sur vos hôtes afin qu'ils puissent accéder au volume.
+
+.Étapes
+. Dans l'onglet volumes, placez le curseur de la souris sur le volume, sélectionnez l'icône de menu, puis cliquez sur *Mount*.
+. Cliquez sur *Copier*.
+. Sur vos hôtes Linux, modifiez le texte copié en modifiant le répertoire de destination, puis entrez la commande permettant de monter le volume.
+

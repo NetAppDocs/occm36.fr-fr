@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_setting_up_users_tenants.html 
+keywords: users, adding, creating, tenants 
+summary: 'Cloud Manager vous permet d"ajouter des utilisateurs Cloud Central à Cloud Manager et d"isoler les environnements de travail à l"aide de locataires.' 
+---
+= Configuration des utilisateurs et des locataires
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager vous permet d'ajouter des utilisateurs Cloud Central à Cloud Manager et d'isoler les environnements de travail à l'aide de locataires.
+
+
+
+== Ajout d'utilisateurs à Cloud Manager
+
+Si d'autres utilisateurs doivent utiliser votre système Cloud Manager, ils doivent s'inscrire à un compte dans NetApp Cloud Central. Vous pouvez ensuite ajouter les utilisateurs à Cloud Manager.
+
+.Étapes
+. Si l'utilisateur n'a pas encore de compte dans NetApp Cloud Central, envoyez-lui un lien vers votre système Cloud Manager et demandez-lui de s'inscrire.
++
+Attendez que l'utilisateur confirme qu'il s'est inscrit à un compte.
+
+. Dans Cloud Manager, cliquez sur l'icône de l'utilisateur, puis sur *Afficher les utilisateurs*.
+. Cliquez sur *nouvel utilisateur*.
+. Entrez l'adresse e-mail associée au compte d'utilisateur, sélectionnez un rôle et cliquez sur *Ajouter*.
+
+
+Informez l'utilisateur qu'il peut désormais se connecter au système Cloud Manager.
+
+
+
+== Création de locataires
+
+Les locataires vous permettent d'isoler vos environnements de travail en groupes distincts. Vous créez un ou plusieurs environnements de travail au sein d'un locataire. link:concept_storage_management.html#storage-isolation-using-tenants["En savoir plus sur les locataires"].
+
+.Étapes
+. Cliquez sur l'icône locataires, puis sur *Ajouter locataire*.
++
+image:screenshot_tenants_icon.gif["Capture d'écran : affiche l'icône de locataire (un poussoir) et le bouton Ajouter un locataire, disponibles dans l'angle supérieur droit de la console Cloud Manager."]
+
+. Entrez un nom, une description et un centre de coûts, si nécessaire.
+. Cliquez sur *Enregistrer*.
+
+
+Vous pouvez à présent passer à ce nouveau locataire et ajouter à ce locataire les administrateurs des locataires et de l'environnement de travail.

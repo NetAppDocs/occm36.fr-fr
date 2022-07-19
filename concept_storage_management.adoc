@@ -1,0 +1,215 @@
+---
+sidebar: sidebar 
+permalink: concept_storage_management.html 
+keywords: tenants, provisioning, volume view, working environments, capacity management, storage provisioning, manual, automatic, advanced allocation, aggregates, thin provisioning, free space, mode, tenants, isolate, isolation, cloud manager admin, admin, tenant admin, working environment admin, volume view, paygo, license, upgrade 
+summary: Cloud Manager simplifie le provisionnement du stockage en achetant le stockage AWS et Azure dont vous avez besoin pour provisionner des volumes pour Cloud Volumes ONTAP. 
+---
+= Gestion du stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager permet une gestion simplifiée et avancée du stockage Cloud Volumes ONTAP.
+
+
+IMPORTANT: Tous les disques et agrégats doivent être créés et supprimés directement de Cloud Manager. Vous ne devez pas effectuer ces actions à partir d'un autre outil de gestion. Cela peut avoir un impact sur la stabilité du système, entraver la possibilité d'ajouter des disques à l'avenir et générer potentiellement des frais de fournisseur de cloud redondant.
+
+
+
+== Provisionnement du stockage
+
+Cloud Manager facilite le provisionnement du stockage pour Cloud Volumes ONTAP en achetant des disques et en gérant des agrégats pour vous. Il vous suffit de créer des volumes. Si vous le souhaitez, vous pouvez utiliser une option d'allocation avancée pour provisionner vous-même des agrégats.
+
+
+
+=== Provisionnement simplifié
+
+Les agrégats fournissent un stockage cloud aux volumes. Cloud Manager crée des agrégats pour vous lorsque vous lancez une instance et que vous provisionnez des volumes supplémentaires.
+
+Lorsque vous créez un volume, Cloud Manager fait l'une des trois opérations suivantes :
+
+* Il place le volume sur un agrégat existant qui dispose d'un espace libre suffisant.
+* Il place le volume sur un agrégat existant en achetant plus de disques pour cet agrégat.
+* Il achète des disques pour un nouvel agrégat et place le volume sur cet agrégat.
+
+
+Cloud Manager détermine où placer un nouveau volume en se base sur plusieurs facteurs : la taille maximale d'un agrégat, l'activation ou non du provisionnement fin et les seuils d'espace disponible pour les agrégats.
+
+
+TIP: L'administrateur de Cloud Manager peut modifier les seuils d'espace libre à partir de la page *Paramètres*.
+
+
+
+==== Sélection de la taille du disque pour les agrégats dans AWS
+
+Lorsque Cloud Manager crée de nouveaux agrégats pour Cloud Volumes ONTAP dans AWS, il augmente progressivement la taille du disque dans un agrégat, à mesure que le nombre d'agrégats dans le système augmente. Cloud Manager vous permet ainsi d'utiliser la capacité maximale du système avant d'atteindre le nombre maximal de disques de données autorisés par AWS.
+
+Par exemple, Cloud Manager peut choisir les tailles de disque suivantes pour les agrégats dans un système Cloud Volumes ONTAP Premium ou BYOL :
+
+[cols="3*"]
+|===
+| Numéro d'agrégat | Taille du disque | Capacité d'agrégat max. 
+
+
+| 1 | 500 Mo. | 3 To 
+
+
+| 4 | 1 To | 6 To 
+
+
+| 6 | 2 To | 12 To 
+|===
+Vous pouvez choisir vous-même la taille du disque en utilisant l'option d'allocation avancée.
+
+
+
+=== Allocation avancée
+
+Plutôt que de laisser Cloud Manager gérer les agrégats pour vous, vous pouvez le faire vous-même. link:task_provisioning_storage.html#creating-aggregates["À partir de la page *allocation avancée*"], vous pouvez créer de nouveaux agrégats qui incluent un nombre spécifique de disques, ajouter des disques à un agrégat existant et créer des volumes dans des agrégats spécifiques.
+
+
+
+== Gestion de la capacité
+
+L'administrateur Cloud Manager peut choisir si Cloud Manager vous informe des décisions relatives à la capacité de stockage ou si Cloud Manager gère automatiquement les besoins en capacité pour vous. Il peut vous aider à comprendre le fonctionnement de ces modes.
+
+
+
+=== Gestion automatique de la capacité
+
+Si l'administrateur Cloud Manager définit le mode de gestion de la capacité sur automatique, Cloud Manager achète automatiquement de nouveaux disques pour les instances Cloud Volumes ONTAP lorsque vous avez besoin de plus de capacité, supprime les collections de disques (agrégats) inutilisées, déplace des volumes entre les agrégats si nécessaire et tente d'annuler la défaillance des disques.
+
+Les exemples suivants illustrent le fonctionnement de ce mode :
+
+* Si un agrégat de 5 disques EBS ou moins atteint le seuil de capacité, Cloud Manager achète automatiquement de nouveaux disques pour cet agrégat afin que les volumes puissent continuer à croître.
+* Si un agrégat de 12 disques Azure atteint le seuil de capacité, Cloud Manager déplace automatiquement un volume de cet agrégat vers un agrégat de capacité disponible ou vers un nouvel agrégat.
++
+Si Cloud Manager crée un nouvel agrégat pour le volume, il sélectionne une taille de disque qui convient à sa taille.
+
++
+Notez que l'espace libre est désormais disponible sur l'agrégat d'origine. Les volumes existants ou les nouveaux volumes peuvent utiliser cet espace. L'espace ne peut pas être retourné à AWS ou Azure dans ce scénario.
+
+* Si un agrégat ne contient pas de volumes pendant plus de 12 heures, Cloud Manager le supprime.
+
+
+
+
+=== Gestion manuelle de la capacité
+
+Si l'administrateur Cloud Manager définit le mode de gestion de la capacité sur manuel, Cloud Manager affiche les messages Action requise lorsque des décisions de capacité doivent être prises. Les mêmes exemples décrits en mode automatique s'appliquent au mode manuel, mais il vous appartient d'accepter les actions.
+
+
+
+== Isolation du stockage à l'aide de locataires
+
+Cloud Manager vous permet de provisionner et de gérer le stockage dans des groupes isolés appelés locataires. Vous devez décider comment organiser les utilisateurs de Cloud Manager et leurs environnements de travail entre les locataires.
+
+
+
+=== Environnements de travail
+
+Cloud Manager représente les systèmes de stockage comme _environnements de travail_. Un environnement de travail est l'un des suivants :
+
+* Un seul système Cloud Volumes ONTAP ou une paire HA
+* Un cluster ONTAP sur site dans votre réseau
+* Un cluster ONTAP dans une configuration de stockage privé NetApp
+
+
+L'image suivante montre un environnement de travail Cloud Volumes ONTAP :
+
+image:screenshot_working_env.gif["Capture d'écran : environnement de travail Cloud Volumes ONTAP affichant le stockage Cloud Volumes ONTAP."]
+
+
+
+=== Locataires
+
+Un _tenant_ isole les environnements de travail dans les groupes. Vous créez un ou plusieurs environnements de travail au sein d'un locataire. L'image suivante montre trois locataires définis dans Cloud Manager :
+
+image:screenshot_tenants.gif["Capture d'écran : page locataires, qui affiche trois locataires définis."]
+
+
+
+=== Gestion des utilisateurs des locataires et des environnements de travail
+
+Les locataires et les environnements de travail que les utilisateurs de Cloud Manager peuvent gérer dépendent du rôle et des affectations des utilisateurs. Les trois rôles d'utilisateur distincts sont les suivants :
+
+Administrateur de Cloud Manager:: Gère le produit et peut accéder à tous les locataires et environnements de travail.
+Administration des locataires:: Administre un locataire unique. Permet de créer et de gérer tous les environnements de travail et tous les utilisateurs du locataire.
+Administration de l'environnement de travail:: Peut créer et gérer un ou plusieurs environnements de travail dans un locataire.
+
+
+
+
+=== Exemple de création de locataires et d'utilisateurs
+
+Si votre organisation dispose de services indépendants, il est préférable d'avoir un locataire pour chaque ministère.
+
+Par exemple, vous pouvez créer trois locataires pour trois services distincts. Vous créerez ensuite un administrateur de locataires pour chaque locataire. Au sein de chaque locataire, un ou plusieurs administrateurs d'environnement de travail gèrent les environnements de travail. L'image suivante illustre ce scénario :
+
+image:diagram_users_and_tenants.png["Cette illustration présente un administrateur Cloud Manager, trois administrateurs de locataires et trois locataires comprenant plusieurs environnements de travail et les administrateurs de l'environnement de travail qui les gèrent."]
+
+
+
+== Gestion simplifiée du stockage à l'aide de Volume View
+
+Cloud Manager offre une vue de gestion distincte appelée _Volume View_, qui simplifie encore davantage la gestion du stockage dans AWS.
+
+La vue en volume vous permet de spécifier simplement les volumes NFS dont vous avez besoin dans AWS, puis Cloud Manager gère le reste : il déploie les systèmes Cloud Volumes ONTAP selon vos besoins et prend les décisions d'allocation de capacité à mesure que les volumes augmentent. Cette vue vous offre les avantages du stockage d'entreprise dans le cloud avec très peu de gestion du stockage.
+
+L'image suivante montre comment vous interagissez avec Cloud Manager dans la vue 3D :
+
+image:diagram_volume_view_overview.png["Il s'agit d'une image conceptuelle du fonctionnement de la vue en volume. Il y a quatre appels. Le nombre 1 pointe vers les volumes. Le chiffre 2 correspond aux systèmes de stockage Cloud Volumes ONTAP et au stockage EBS sous-jacent. Nombre de 3 points vers les volumes disponibles pour les hôtes. Nombre 4 points vers les systèmes Cloud Volumes ONTAP et le stockage sous-jacent."]
+
+. Vous créez des volumes NFS.
+. Cloud Manager lance des instances Cloud Volumes ONTAP dans AWS pour de nouveaux volumes ou crée des volumes sur des instances existantes. Il achète également du stockage EBS physique pour les volumes.
+. Vous mettez les volumes à la disposition de vos hôtes et applications.
+. Cloud Manager prend des décisions d'allocation de capacité à mesure que vos volumes augmentent.
++
+Cela signifie que vous avez simplement besoin d'interagir avec les volumes (l'image à gauche), tandis que Cloud Manager interagit avec le système de stockage et son stockage sous-jacent (l'image à droite).
+
+
+
+
+
+=== Allocation des ressources cloud pour le volume initial
+
+Lorsque vous créez votre premier volume, Cloud Manager lance une instance Cloud Volumes ONTAP ou une paire Cloud Volumes ONTAP HA dans AWS et achète le stockage Amazon EBS pour le volume :
+
+image:diagram_volume_view_resources.png["Cette image conceptuelle montre les ressources AWS créées par Cloud Manager pour le volume initial : une instance Cloud Volumes ONTAP de type instance m4.xlarge ou m4.2xlarge et un à quatre disques chiffrés EBS de un téraoctet."]
+
+La taille du volume initial détermine le type d'instance EC2 et le nombre de disques EBS.
+
+
+NOTE: Cloud Manager lance une instance Cloud Volumes ONTAP Explore ou Standard, en fonction de la taille initiale du volume. Lorsque les volumes augmentent, Cloud Manager peut vous inviter à modifier une instance AWS, ce qui signifie qu'il doit mettre à niveau la licence de l'instance vers Standard ou Premium. La mise à niveau augmente la limite de capacité brute EBS, ce qui permet à vos volumes de croître.
+
+
+NOTE: Cloud Manager ne lance pas les instances Cloud Volumes ONTAP BYOL dans Volume View. Si vous avez acheté une licence Cloud Volumes ONTAP, vous devez utiliser Cloud Manager dans Storage System View.
+
+
+
+=== Allocation de ressources cloud pour des volumes supplémentaires
+
+Lorsque vous créez des volumes supplémentaires, Cloud Manager crée les volumes sur des instances Cloud Volumes ONTAP existantes ou sur de nouvelles instances Cloud Volumes ONTAP. Cloud Manager peut créer un volume sur une instance existante si l'emplacement et le type de disque AWS de l'instance correspondent au volume demandé, et si l'espace est suffisant.
+
+
+
+=== Fonctionnalités d'efficacité du stockage NetApp et coûts du stockage
+
+Cloud Manager active automatiquement les fonctionnalités d'efficacité du stockage NetApp sur tous les volumes. Ces gains d'efficacité peuvent réduire la quantité totale de stockage dont vous avez besoin. Vous constaterez peut-être une différence entre votre capacité allouée et la capacité AWS achetée, ce qui peut entraîner des économies de coûts de stockage.
+
+
+
+=== Décisions d'allocation de capacité prises automatiquement par Cloud Manager
+
+* Cloud Manager achète des disques EBS supplémentaires lorsque les seuils de capacité sont dépassés. Cela se produit à mesure que vos volumes augmentent.
+* Cloud Manager supprime les jeux inutilisés de disques EBS si les disques ne contiennent aucun volume pendant 12 heures.
+* Cloud Manager déplace les volumes entre des jeux de disques pour éviter les problèmes de capacité.
++
+Dans certains cas, cela nécessite l'achat de disques EBS supplémentaires. Il libère également de l'espace sur l'ensemble de disques d'origine pour les volumes nouveaux et existants.
+
+

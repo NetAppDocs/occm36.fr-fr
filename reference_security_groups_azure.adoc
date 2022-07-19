@@ -1,0 +1,360 @@
+---
+sidebar: sidebar 
+permalink: reference_security_groups_azure.html 
+keywords: security group, security groups, rules, ports, azure, inbound, outbound, rules 
+summary: Cloud Manager crée des groupes de sécurité Azure qui incluent les règles entrantes et sortantes dont Cloud Manager et Cloud Volumes ONTAP ont besoin pour fonctionner correctement. Vous pouvez vous référer aux ports à des fins de test ou si vous devez utiliser votre propre. 
+---
+= Règles de groupe de sécurité pour Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager crée des groupes de sécurité Azure qui incluent les règles entrantes et sortantes dont Cloud Manager et Cloud Volumes ONTAP ont besoin pour fonctionner correctement. Vous pouvez vous référer aux ports à des fins de test ou si vous préférez que votre utilise ses propres groupes de sécurité.
+
+
+
+== Règles pour Cloud Manager
+
+Le groupe de sécurité de Cloud Manager requiert à la fois des règles entrantes et sortantes.
+
+
+
+=== Règles entrantes pour Cloud Manager
+
+La source des règles entrantes dans le groupe de sécurité prédéfini est 0.0.0.0/0.
+
+[cols="10,10,80"]
+|===
+| Protocole | Port | Objectif 
+
+
+| SSH | 22 | Fournit un accès SSH à l'hôte Cloud Manager 
+
+
+| HTTP | 80 | Fournit un accès HTTP depuis les navigateurs Web clients vers la console Web de Cloud Manager 
+
+
+| HTTPS | 443 | Fournit un accès HTTPS depuis les navigateurs Web clients vers la console Web Cloud Manager 
+|===
+
+
+=== Règles de sortie pour Cloud Manager
+
+Le groupe de sécurité prédéfini pour Cloud Manager ouvre tout le trafic sortant. Si cela est acceptable, suivez les règles de base de l'appel sortant. Si vous avez besoin de règles plus rigides, utilisez les règles de sortie avancées.
+
+
+
+==== Règles de base pour les appels sortants
+
+Le groupe de sécurité prédéfini pour Cloud Manager inclut les règles de sortie suivantes.
+
+[cols="20,20,60"]
+|===
+| Protocole | Port | Objectif 
+
+
+| Tous les protocoles TCP | Tout | Tout le trafic sortant 
+
+
+| Tous les protocoles UDP | Tout | Tout le trafic sortant 
+|===
+
+
+==== Règles de sortie avancées
+
+Si vous avez besoin de règles rigides pour le trafic sortant, vous pouvez utiliser les informations suivantes pour ouvrir uniquement les ports requis pour la communication sortante par Cloud Manager.
+
+
+NOTE: L'adresse IP source est l'hôte Cloud Manager.
+
+[cols="5*"]
+|===
+| Service | Protocole | Port | Destination | Objectif 
+
+
+.9+| Active Directory | TCP | 88 | Forêt Active Directory | Authentification Kerberos V. 
+
+
+| TCP | 139 | Forêt Active Directory | Session de service NetBIOS 
+
+
+| TCP | 389 | Forêt Active Directory | LDAP 
+
+
+| TCP | 445 | Forêt Active Directory | Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS 
+
+
+| TCP | 464 | Forêt Active Directory | Modification et définition du mot de passe Kerberos V (SET_CHANGE) 
+
+
+| TCP | 749 | Forêt Active Directory | Modification et définition du mot de passe de Kerberos V Active Directory (RPCSEC_GSS) 
+
+
+| UDP | 137 | Forêt Active Directory | Service de noms NetBIOS 
+
+
+| UDP | 138 | Forêt Active Directory | Service de datagrammes NetBIOS 
+
+
+| UDP | 464 | Forêt Active Directory | Administration des clés Kerberos 
+
+
+| Appels API et AutoSupport | HTTPS | 443 | LIF de gestion de cluster ONTAP et Internet sortant | API appelle AWS et ONTAP et envoie des messages AutoSupport à NetApp 
+
+
+| Appels API | TCP | 3000 | LIF de gestion de cluster ONTAP | Appels API vers ONTAP 
+
+
+| DNS | UDP | 53 | DNS | Utilisé pour la résolution DNS par Cloud Manager 
+|===
+
+
+== Règles pour Cloud Volumes ONTAP
+
+Le groupe de sécurité pour Cloud Volumes ONTAP requiert des règles entrantes et sortantes.
+
+
+
+=== Règles entrantes pour les systèmes à nœud unique
+
+[cols="8,13,8,8,13,13,8,27"]
+|===
+| Priorité | Nom | Port | Protocole | Source | Destination | Action | Description 
+
+
+| 1000 | ssh_entrant | 22 | TCP | Toutes | Toutes | Autoriser | Accès SSH à l'adresse IP du LIF de gestion de cluster ou d'un LIF de gestion de nœud 
+
+
+| 1001 | inbound_http | 80 | TCP | Toutes | Toutes | Autoriser | Accès HTTP à la console Web System Manager à l'aide de l'adresse IP du LIF de gestion de cluster 
+
+
+| 1002 | inbound_111_tcp | 111 | TCP | Toutes | Toutes | Autoriser | Appel de procédure à distance pour NFS 
+
+
+| 1003 | inbound_111_udp | 111 | UDP | Toutes | Toutes | Autoriser | Appel de procédure à distance pour NFS 
+
+
+| 1004 | entrant_139 | 139 | TCP | Toutes | Toutes | Autoriser | Session de service NetBIOS pour CIFS 
+
+
+| 1005 | inbound_161-162 _tcp | 161-162 | TCP | Toutes | Toutes | Autoriser | Protocole de gestion de réseau simple 
+
+
+| 1006 | inbound_161-162 _udp | 161-162 | UDP | Toutes | Toutes | Autoriser | Protocole de gestion de réseau simple 
+
+
+| 1007 | entrant_443 | 443 | TCP | Toutes | Toutes | Autoriser | Accès HTTPS à la console Web System Manager à l'aide de l'adresse IP du LIF de gestion de cluster 
+
+
+| 1008 | entrant_445 | 445 | TCP | Toutes | Toutes | Autoriser | Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS 
+
+
+| 1009 | inbound_635_tcp | 658 | TCP | Toutes | Toutes | Autoriser | Montage NFS 
+
+
+| 1010 | inbound_635_udp | 658 | TCP | Toutes | Toutes | Autoriser | Montage NFS 
+
+
+| 1011 | entrant_749 | 749 | TCP | Toutes | Toutes | Autoriser | Kerberos 
+
+
+| 1012 | inbound_2049_tcp | 2049 | TCP | Toutes | Toutes | Autoriser | Démon du serveur NFS 
+
+
+| 1013 | inbound_2049_udp | 2049 | UDP | Toutes | Toutes | Autoriser | Démon du serveur NFS 
+
+
+| 1014 | entrant_3260 | 3260 | TCP | Toutes | Toutes | Autoriser | Accès iSCSI via le LIF de données iSCSI 
+
+
+| 1015 | inbound_4045-4046_tcp | 4045-4046 | TCP | Toutes | Toutes | Autoriser | Démon de verrouillage NFS et contrôle de l'état du réseau 
+
+
+| 1016 | inbound_4045-4046_udp | 4045-4046 | UDP | Toutes | Toutes | Autoriser | Démon de verrouillage NFS et contrôle de l'état du réseau 
+
+
+| 1017 | entrant_10000 | 10000 | TCP | Toutes | Toutes | Autoriser | Sauvegarde avec NDMP 
+
+
+| 1018 | entrant_11104-11105 | 11104-11105 | TCP | Toutes | Toutes | Autoriser | Transfert de données SnapMirror 
+
+
+| 3000 | inbound_deny _all_tcp | Toutes | TCP | Toutes | Toutes | Refuser | Bloquer tout autre trafic TCP entrant 
+
+
+| 3001 | inbound_deny _all_udp | Toutes | UDP | Toutes | Toutes | Refuser | Bloquer tout autre trafic entrant UDP 
+
+
+| 65000 | AllowVnetInBound | Toutes | Toutes | VirtualNetwork | VirtualNetwork | Autoriser | Trafic entrant depuis le réseau VNet 
+
+
+| 65001 | AllowAzureLoad BalancerInBound | Toutes | Toutes | Équilibreur de charge AzureLoadBalancer | Toutes | Autoriser | Le trafic de données à partir d'Azure Standard Load Balancer 
+
+
+| 65500 | DenyAllInBound | Toutes | Toutes | Toutes | Toutes | Refuser | Bloquer tout autre trafic entrant 
+|===
+
+
+=== Règles entrantes pour les systèmes HA
+
+
+NOTE: Les systèmes HAUTE DISPONIBILITÉ disposent de règles entrantes moins strictes que les systèmes à un seul nœud, car le trafic des données entrantes transite par Azure Standard Load Balancer. Pour cette raison, le trafic provenant du Load Balancer doit être ouvert, comme indiqué dans la règle AllowAzureLoadBalancerInBound.
+
+[cols="8,13,8,8,13,13,8,27"]
+|===
+| Priorité | Nom | Port | Protocole | Source | Destination | Action | Description 
+
+
+| 100 | entrant_443 | 443 | Toutes | Toutes | Toutes | Autoriser | Accès HTTPS à la console Web System Manager à l'aide de l'adresse IP du LIF de gestion de cluster 
+
+
+| 101 | inbound_111_tcp | 111 | Toutes | Toutes | Toutes | Autoriser | Appel de procédure à distance pour NFS 
+
+
+| 102 | inbound_2049_tcp | 2049 | Toutes | Toutes | Toutes | Autoriser | Démon du serveur NFS 
+
+
+| 111 | ssh_entrant | 22 | Toutes | Toutes | Toutes | Autoriser | Accès SSH à l'adresse IP du LIF de gestion de cluster ou d'un LIF de gestion de nœud 
+
+
+| 121 | entrant_53 | 53 | Toutes | Toutes | Toutes | Autoriser | DNS et CIFS 
+
+
+| 65000 | AllowVnetInBound | Toutes | Toutes | VirtualNetwork | VirtualNetwork | Autoriser | Trafic entrant depuis le réseau VNet 
+
+
+| 65001 | AllowAzureLoad BalancerInBound | Toutes | Toutes | Équilibreur de charge AzureLoadBalancer | Toutes | Autoriser | Le trafic de données à partir d'Azure Standard Load Balancer 
+
+
+| 65500 | DenyAllInBound | Toutes | Toutes | Toutes | Toutes | Refuser | Bloquer tout autre trafic entrant 
+|===
+
+
+=== Règles de sortie pour Cloud Volumes ONTAP
+
+Le groupe de sécurité prédéfini pour Cloud Volumes ONTAP ouvre tout le trafic sortant. Si cela est acceptable, suivez les règles de base de l'appel sortant. Si vous avez besoin de règles plus rigides, utilisez les règles de sortie avancées.
+
+
+
+==== Règles de base pour les appels sortants
+
+Le groupe de sécurité prédéfini pour Cloud Volumes ONTAP inclut les règles de sortie suivantes.
+
+[cols="20,20,60"]
+|===
+| Protocole | Port | Objectif 
+
+
+| Tous les protocoles TCP | Tout | Tout le trafic sortant 
+
+
+| Tous les protocoles UDP | Tout | Tout le trafic sortant 
+|===
+
+
+==== Règles de sortie avancées
+
+Si vous avez besoin de règles rigides pour le trafic sortant, vous pouvez utiliser les informations suivantes pour ouvrir uniquement les ports requis pour la communication sortante par Cloud Volumes ONTAP.
+
+
+NOTE: La source est l'interface (adresse IP) du système Cloud Volumes ONTAP.
+
+[cols="10,10,10,20,20,40"]
+|===
+| Service | Protocole | Port | Source | Destination | Objectif 
+
+
+.18+| Active Directory | TCP | 88 | FRV de gestion des nœuds | Forêt Active Directory | Authentification Kerberos V. 
+
+
+| UDP | 137 | FRV de gestion des nœuds | Forêt Active Directory | Service de noms NetBIOS 
+
+
+| UDP | 138 | FRV de gestion des nœuds | Forêt Active Directory | Service de datagrammes NetBIOS 
+
+
+| TCP | 139 | FRV de gestion des nœuds | Forêt Active Directory | Session de service NetBIOS 
+
+
+| TCP | 389 | FRV de gestion des nœuds | Forêt Active Directory | LDAP 
+
+
+| TCP | 445 | FRV de gestion des nœuds | Forêt Active Directory | Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS 
+
+
+| TCP | 464 | FRV de gestion des nœuds | Forêt Active Directory | Modification et définition du mot de passe Kerberos V (SET_CHANGE) 
+
+
+| UDP | 464 | FRV de gestion des nœuds | Forêt Active Directory | Administration des clés Kerberos 
+
+
+| TCP | 749 | FRV de gestion des nœuds | Forêt Active Directory | Modification et définition du mot de passe Kerberos V (RPCSEC_GSS) 
+
+
+| TCP | 88 | FRV de données (NFS, CIFS) | Forêt Active Directory | Authentification Kerberos V. 
+
+
+| UDP | 137 | FRV de données (NFS, CIFS) | Forêt Active Directory | Service de noms NetBIOS 
+
+
+| UDP | 138 | FRV de données (NFS, CIFS) | Forêt Active Directory | Service de datagrammes NetBIOS 
+
+
+| TCP | 139 | FRV de données (NFS, CIFS) | Forêt Active Directory | Session de service NetBIOS 
+
+
+| TCP | 389 | FRV de données (NFS, CIFS) | Forêt Active Directory | LDAP 
+
+
+| TCP | 445 | FRV de données (NFS, CIFS) | Forêt Active Directory | Microsoft SMB/CIFS sur TCP avec encadrement NetBIOS 
+
+
+| TCP | 464 | FRV de données (NFS, CIFS) | Forêt Active Directory | Modification et définition du mot de passe Kerberos V (SET_CHANGE) 
+
+
+| UDP | 464 | FRV de données (NFS, CIFS) | Forêt Active Directory | Administration des clés Kerberos 
+
+
+| TCP | 749 | FRV de données (NFS, CIFS) | Forêt Active Directory | Modification et définition du mot de passe Kerberos V (RPCSEC_GSS) 
+
+
+| DHCP | UDP | 68 | FRV de gestion des nœuds | DHCP | Client DHCP pour la première configuration 
+
+
+| DHCPS | UDP | 67 | FRV de gestion des nœuds | DHCP | Serveur DHCP 
+
+
+| DNS | UDP | 53 | FRV de gestion des nœuds et FRV de données (NFS, CIFS) | DNS | DNS 
+
+
+| NDMP | TCP | 18600-18699 | FRV de gestion des nœuds | Serveurs de destination | Copie NDMP 
+
+
+| SMTP | TCP | 25 | FRV de gestion des nœuds | Serveur de messagerie | Les alertes SMTP peuvent être utilisées pour AutoSupport 
+
+
+.4+| SNMP | TCP | 161 | FRV de gestion des nœuds | Serveur de surveillance | Surveillance par des interruptions SNMP 
+
+
+| UDP | 161 | FRV de gestion des nœuds | Serveur de surveillance | Surveillance par des interruptions SNMP 
+
+
+| TCP | 162 | FRV de gestion des nœuds | Serveur de surveillance | Surveillance par des interruptions SNMP 
+
+
+| UDP | 162 | FRV de gestion des nœuds | Serveur de surveillance | Surveillance par des interruptions SNMP 
+
+
+.2+| SnapMirror | TCP | 11104 | FRV InterCluster | Baies de stockage inter-clusters ONTAP | Gestion des sessions de communication intercluster pour SnapMirror 
+
+
+| TCP | 11105 | FRV InterCluster | Baies de stockage inter-clusters ONTAP | Transfert de données SnapMirror 
+
+
+| Syslog | UDP | 514 | FRV de gestion des nœuds | Serveur Syslog | Messages de transfert syslog 
+|===

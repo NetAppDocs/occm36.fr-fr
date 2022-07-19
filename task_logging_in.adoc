@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: task_logging_in.html 
+keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account 
+summary: 'Vous pouvez vous connecter à Cloud Manager à partir de n"importe quel navigateur Web disposant d"une connexion au système Cloud Manager. Vous devez vous connecter à l"aide d"un compte utilisateur NetApp Cloud Central.' 
+---
+= Connectez-vous à Cloud Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez vous connecter à Cloud Manager à partir de n'importe quel navigateur Web disposant d'une connexion au système Cloud Manager. Vous devez vous connecter à l'aide d'un https://cloud.netapp.com["NetApp Cloud Central"^] compte utilisateur.
+
+.Étapes
+. Ouvrez un navigateur Web et connectez-vous à https://cloud.netapp.com["NetApp Cloud Central"^].
+. Cliquez sur *allez dans Services de données cloud* et sélectionnez *Cloud Volumes ONTAP*.
+. Cliquez sur *accédez à Cloud Manager* pour le système Cloud Manager auquel vous souhaitez accéder.
++
+
+TIP: Si aucun système n'est répertorié, assurez-vous que l'administrateur Cloud Manager a ajouté votre compte NetApp Cloud Central au système.
+
+. Connectez-vous à Cloud Manager à l'aide de votre compte NetApp Cloud Central.
++
+image:screenshot_login.gif["L'écran de connexion de Cloud Manager."]
+
+

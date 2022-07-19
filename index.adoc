@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+summary: Bienvenue sur le portail de documentation de Cloud Manager et Cloud Volumes ONTAP. 
+---
+= Documentation sur Cloud Manager et Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Avec OnCommand Cloud Manager, vous pouvez déployer et gérer NetApp Cloud Volumes ONTAP, une solution de gestion des données qui offre protection, visibilité et contrôle pour vos charges de travail cloud.
+
+
+
+== Découvrez les nouveautés
+
+* link:reference_new_occm.html["Nouveautés de Cloud Manager"]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Nouveautés de Cloud Volumes ONTAP"^]
+
+
+
+
+== Commencez
+
+* link:task_getting_started_aws.html["Commencez dans AWS"]
+* link:task_getting_started_azure.html["Commencez à Azure"]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Recherchez les configurations prises en charge pour Cloud Volumes ONTAP"^]
+* link:reference_networking_cloud_manager.html["Passez en revue les exigences de réseau détaillées pour Cloud Manager"]
+* link:reference_networking_aws.html["Passez en revue les exigences de réseau détaillées pour Cloud Volumes ONTAP pour AWS"]
+* link:reference_networking_azure.html["Passez en revue les exigences de réseau détaillées pour Cloud Volumes ONTAP pour Azure"]
+* link:task_planning_your_config.html["Planifiez votre configuration Cloud Volumes ONTAP"]
+
+
+
+
+== Automatisez avec les API
+
+* link:api.html["Guide du développeur API"^]
+* link:reference_infrastructure_as_code.html["Échantillons d'automatisation"]
+
+
+
+
+== Connectez-vous avec vos pairs, obtenez de l'aide et trouvez plus d'informations
+
+* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["Communauté NetApp : services de données cloud"^]
+* https://mysupport.netapp.com/cloudontap["Prise en charge de NetApp Cloud Volumes ONTAP"^]
+* link:reference_additional_info.html["Où obtenir de l'aide et trouver plus d'informations"]
+

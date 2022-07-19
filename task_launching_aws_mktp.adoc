@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task_launching_aws_mktp.html 
+keywords: install, installation, installing, marketplace, aws, launch, launching, ec2 console 
+summary: 'Il est préférable de lancer Cloud Manager dans AWS à l"aide de NetApp Cloud Central , mais vous pouvez le lancer à partir d"AWS Marketplace, si nécessaire.' 
+---
+= Lancement de Cloud Manager à partir d'AWS Marketplace
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il est recommandé de lancer Cloud Manager dans AWS à l'aide de https://cloud.netapp.com["NetApp Cloud Central"^], Mais vous pouvez le lancer depuis AWS Marketplace, si nécessaire.
+
+
+TIP: Si vous lancez Cloud Manager à partir d'AWS Marketplace, Cloud Manager est toujours intégré à NetApp Cloud Central. link:concept_cloud_central.html["En savoir plus sur l'intégration"].
+
+La procédure suivante décrit le lancement de l'instance à partir de la console EC2, car la console vous permet d'associer un rôle IAM à l'instance Cloud Manager. Cette opération n'est pas possible avec l'option 1-clic.
+
+.Étapes
+. Créer une règle IAM et un rôle pour l'instance EC2 :
++
+.. Téléchargez la politique IAM de Cloud Manager à partir de l'emplacement suivant :
++
+https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Manager : Politiques AWS et Azure"^]
+
+.. À partir de la console IAM, créez votre propre stratégie en copiant et en collant le texte de la stratégie IAM de Cloud Manager.
+.. Créez un rôle IAM avec le type de rôle Amazon EC2 et associez la stratégie que vous avez créée à l'étape précédente au rôle.
+
+
+. Accédez au https://aws.amazon.com/marketplace/pp/B018REK8QG["Page Cloud Manager sur AWS Marketplace"^].
+. Cliquez sur *Continuer*.
+. Dans l'onglet lancement personnalisé, cliquez sur *lancer avec la console EC2* pour votre région, puis effectuez vos sélections :
++
+.. Selon la disponibilité de la région, choisissez le type d'instance t3.medium (recommandé), t2.medium ou m4.large.
+.. Sélectionnez un VPC, un sous-réseau, un rôle IAM et d'autres options de configuration qui répondent à vos besoins.
+.. Conservez les options de stockage par défaut.
+.. Entrez des étiquettes pour l'instance, si vous le souhaitez.
+.. Spécifiez les méthodes de connexion requises pour l'instance de Cloud Manager : SSH, HTTP et HTTPS.
+.. Cliquez sur *lancer*.
+
+
+
+
+AWS lance le logiciel avec les paramètres spécifiés. L'instance et le logiciel Cloud Manager doivent être exécutés en cinq minutes environ.
+
+Connectez-vous à Cloud Manager en entrant l'adresse IP publique ou l'adresse IP privée dans un navigateur Web, puis terminez l'assistant d'installation.

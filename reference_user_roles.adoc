@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: reference_user_roles.html 
+keywords: user, role, task, permission, permissions, tasks, roles, admin, cloud manager admin, admin, tenant admin, working environment admin 
+summary: Chaque compte utilisateur Cloud Manager se voit attribuer un rôle qui définit les autorisations. 
+---
+= Rôles utilisateur
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Chaque compte utilisateur Cloud Manager se voit attribuer un rôle qui définit les autorisations.
+
+[cols="25,25,25,25"]
+|===
+| Tâche | Administrateur de Cloud Manager | Administration des locataires | Administration de l'environnement de travail 
+
+
+| Gérer les locataires | Oui. | Non | Non 
+
+
+| Gérer les environnements de travail | Oui. | Oui, pour le locataire affecté | Oui, pour les environnements de travail attribués 
+
+
+| Intégrez un environnement de travail avec Cloud Sync | Oui. | Oui. | Non 
+
+
+| Afficher l'état de la réplication des données | Oui. | Oui, pour le locataire affecté | Oui, pour les environnements de travail attribués 
+
+
+| Afficher la chronologie | Oui. | Oui. | Oui. 
+
+
+| Créer et supprimer des comptes utilisateur | Oui. | Oui, pour le locataire affecté | Non 
+
+
+| Modifier les comptes utilisateur | Oui. | Oui, pour le locataire affecté | Oui, pour leur propre compte 
+
+
+| Gérer les paramètres du compte | Oui. | Non | Non 
+
+
+| Configuration Kubernetes | Oui. | Non | Non 
+
+
+| Passez de l'affichage du système de stockage à l'affichage du volume | Oui. | Non | Non 
+
+
+| Modifier les paramètres | Oui. | Non | Non 
+
+
+| Afficher et gérer le tableau de bord du support | Oui. | Non | Non 
+
+
+| Sauvegardez et restaurez Cloud Manager | Oui. | Non | Non 
+
+
+| Supprimez un environnement de travail | Oui. | Non | Non 
+
+
+| Mettez à jour Cloud Manager | Oui. | Non | Non 
+
+
+| Installez un certificat HTTPS | Oui. | Non | Non 
+
+
+| Configurez Active Directory | Oui. | Non | Non 
+
+
+| Activez le rapport Cloud Storage Automation Report | Oui. | Non | Non 
+|===
