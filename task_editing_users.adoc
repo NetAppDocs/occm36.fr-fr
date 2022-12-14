@@ -19,6 +19,7 @@ summary: Vous pouvez modifier les comptes utilisateur dans Cloud Manager en acti
 [role="lead"]
 Vous pouvez modifier les comptes utilisateur dans Cloud Manager en activant et désactivant le rapport de notification.
 
+.Description de la tâche
 Le mot de passe et les informations utilisateur doivent être modifiés dans https://cloud.netapp.com["NetApp Cloud Central"^].
 
 .Étapes

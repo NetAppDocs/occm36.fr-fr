@@ -109,6 +109,7 @@ image:screenshot_volume_view_ha_network.gif["Capture d'écran : affiche les sél
 
 
 
+.Résultat
 Cloud Manager crée le volume sur un système existant ou sur un nouveau système. Si un nouveau système est nécessaire, la création du volume peut prendre environ 25 minutes.
 
 

@@ -32,11 +32,11 @@ link:media/c2s.pdf["Guide d'aide à la vente des environnements de services clou
 
 == Cloud Manager 3.6.6 (1er mai 2019)
 
-*  for 6 TB disks in AWS
-*  for new disk sizes with single node systems in Azure
-*  for Standard SSDs with single node systems in Azure
-*  discovery of Kubernetes clusters created with the NetApp Kubernetes Service
-*  to configure an NTP server
+* <<Prise en charge des disques de 6 To dans AWS>>
+* <<Prise en charge de nouvelles tailles de disques avec des systèmes à un seul nœud dans Azure>>
+* <<Prise en charge des SSD standard avec des systèmes à un seul nœud dans Azure>>
+* <<Découverte automatique des clusters Kubernetes créés avec NetApp Kubernetes Service>>
+* <<Possibilité de configurer un serveur NTP>>
 
 
 
@@ -104,12 +104,12 @@ image:screenshot_configure_cifs.gif["Capture d'écran affichant l'écran de conf
 
 Cloud Manager 3.6.5 comprend plusieurs améliorations :
 
-*  enhancements
-*  Support Site accounts are now managed at the system level
-*  transit gateways can enable access to floating IP addresses
-*  resource groups are now locked
-*  4 and NFS 4.1 are now enabled by default
-*  new API enables you to delete ONTAP Snapshot copies
+* <<Améliorations de Kubernetes>>
+* <<Les comptes du site de support NetApp sont désormais gérés au niveau du système>>
+* <<Les passerelles de transport AWS peuvent permettre l'accès aux adresses IP flottantes>>
+* <<Les groupes de ressources Azure sont maintenant verrouillés>>
+* <<NFS 4 et NFS 4.1 sont désormais activés par défaut>>
+* <<Une nouvelle API vous permet de supprimer les copies Snapshot ONTAP>>
 
 
 
@@ -208,9 +208,9 @@ Voir la https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html[
 
 Cloud Manager 3.6.4 comprend plusieurs améliorations :
 
-*  encryption with a key from another account
-*  of failed disks
-*  storage accounts enabled for HTTPS when data tiering to Blob containers
+* <<Chiffrement géré par AWS avec une clé d'un autre compte>>
+* <<Restauration des disques défaillants>>
+* <<Les comptes de stockage Azure sont activés pour HTTPS lors du Tiering des données dans les conteneurs de objets blob>>
 
 
 
@@ -248,13 +248,13 @@ Lorsque vous configurez un système Cloud Volumes ONTAP pour hiérarchiser les d
 
 Cloud Manager 3.6.3 comprend plusieurs améliorations :
 
-*  for Cloud Volumes ONTAP 9.5 GA
-*  TB capacity limit for all Premium and BYOL configurations
-*  for new AWS regions
-*  for S3 Intelligent-Tiering
-*  to disable data tiering on the initial aggregate
-*  EC2 instance type now t3.medium for Cloud Manager
-*  of scheduled shutdowns during data transfers
+* <<Prise en charge de Cloud Volumes ONTAP 9.5 GA>>
+* <<Limite de capacité de 368 To pour toutes les configurations Premium et BYOL>>
+* <<Prise en charge des nouvelles régions AWS>>
+* <<Prise en charge du Tiering intelligent S3>>
+* <<Possibilité de désactiver le Tiering des données sur l'agrégat initial>>
+* <<Type d'instance EC2 recommandé maintenant t3.medium pour Cloud Manager>>
+* <<Report des arrêts programmés pendant les transferts de données>>
 
 
 
@@ -329,10 +329,10 @@ Si vous avez planifié un arrêt automatique de votre système Cloud Volumes ONT
 
 Cloud Manager 3.6.2 inclut de nouvelles fonctionnalités et améliorations.
 
-*  spread placement group for Cloud Volumes ONTAP HA in a single AZ
-*  protection
-*  data replication policies
-*  access control for Kubernetes
+* <<AWS répartit le groupe de placement pour Cloud Volumes ONTAP HA en une seule zone de disponibilité>>
+* <<Protection par ransomware>>
+* <<Nouvelles règles de réplication des données>>
+* <<Contrôle d'accès de volume pour Kubernetes>>
 
 
 
@@ -405,10 +405,10 @@ Vous pouvez configurer l'export policy lorsque vous connectez un environnement d
 
 Cloud Manager 3.6.1 inclut de nouvelles fonctionnalités et améliorations.
 
-*  for Cloud Volumes ONTAP 9.5 in Azure
-*  Provider Accounts
-*  to the AWS Cost report
-*  for new Azure regions
+* <<Prise en charge d'Cloud Volumes ONTAP 9.5 dans Azure>>
+* <<Comptes fournisseurs cloud>>
+* <<Améliorations apportées au rapport sur les coûts AWS>>
+* <<Prise en charge des nouvelles régions Azure>>
 
 
 

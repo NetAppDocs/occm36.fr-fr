@@ -53,6 +53,7 @@ Lorsque vous vous connectez, Cloud Manager ajoute automatiquement votre compte u
 . Après vous être connecté, entrez un nom pour le système Cloud Manager.
 
 
+.Résultat
 Cloud Manager est maintenant installé et configuré. Vous devez accorder des autorisations Azure avant que les utilisateurs puissent déployer Cloud Volumes ONTAP dans Azure.
 
 
@@ -115,4 +116,5 @@ NOTE: L'opérateur OnCommand Cloud Manager est le nom par défaut fourni dans ht
 
 
 
+.Résultat
 Cloud Manager dispose désormais des autorisations dont il a besoin pour déployer et gérer Cloud Volumes ONTAP dans Azure.

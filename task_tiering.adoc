@@ -133,6 +133,7 @@ Pour obtenir de l'aide sur la réplication des données, voir link:task_replicat
 
 Lorsque vous activez le Tiering des données, Cloud Volumes ONTAP transfère les données inactives vers la classe de stockage S3 _Standard_ dans AWS ou vers le Tier de stockage _hot_ dans Azure. Une fois déployé Cloud Volumes ONTAP, vous pouvez réduire les coûts de stockage en modifiant le niveau de Tiering des données inactives inutilisées depuis 30 jours. Les coûts d'accès sont plus élevés si vous accédez aux données. Vous devez donc en tenir compte avant de modifier le niveau de hiérarchisation.
 
+.Description de la tâche
 Le niveau de hiérarchisation est large du système : il n'est pas par volume.
 
 Dans AWS, vous pouvez modifier le niveau de Tiering afin que les données inactives soient déplacées vers l'une des classes de stockage suivantes après 30 jours d'inactivité :

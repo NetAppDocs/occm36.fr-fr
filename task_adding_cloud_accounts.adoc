@@ -24,8 +24,8 @@ Lorsque vous déployez Cloud Manager depuis Cloud Central, Cloud Manager ajoute 
 
 Si vous souhaitez déployer Cloud Volumes ONTAP sur différents comptes AWS, vous devez fournir les autorisations requises à ces comptes, puis ajouter les informations à Cloud Manager. La manière dont vous fournissez les autorisations dépend de votre choix si vous souhaitez fournir Cloud Manager avec des clés AWS ou le NRA d'un rôle dans un compte de confiance.
 
-*  permissions when providing AWS keys
-*  permissions by assuming IAM roles in other accounts
+* <<Octroi d'autorisations lors de l'utilisation de clés AWS>>
+* <<Octroi d'autorisations en assumant des rôles IAM dans d'autres comptes>>
 
 
 
@@ -48,7 +48,8 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Do
 
 
 
-Le compte dispose désormais des autorisations requises.  AWS accounts to Cloud Manager,Vous pouvez désormais l'ajouter à Cloud Manager.
+.Résultat
+Le compte dispose désormais des autorisations requises. <<Ajout de comptes AWS à Cloud Manager,Vous pouvez désormais l'ajouter à Cloud Manager>>.
 
 
 
@@ -92,7 +93,8 @@ image:screenshot_iam_create_role.gif["Capture d'écran affichant la page Créer 
 
 
 
-Le compte dispose désormais des autorisations requises.  AWS accounts to Cloud Manager,Vous pouvez désormais l'ajouter à Cloud Manager.
+.Résultat
+Le compte dispose désormais des autorisations requises. <<Ajout de comptes AWS à Cloud Manager,Vous pouvez désormais l'ajouter à Cloud Manager>>.
 
 
 
@@ -107,6 +109,7 @@ Une fois que vous avez passé un compte AWS avec les autorisations requises, vou
 . Vérifiez que les exigences de la stratégie ont été respectées, puis cliquez sur *Créer un compte*.
 
 
+.Résultat
 Vous pouvez maintenant passer à un autre compte à partir de la page Détails et informations d'identification lors de la création d'un nouvel environnement de travail :
 
 image:screenshot_accounts_switch_aws.gif["Capture d'écran indiquant la sélection entre les comptes fournisseurs de services cloud après avoir cliqué sur changer de compte dans la page Détails etamp ; informations d'identification."]
@@ -117,8 +120,8 @@ image:screenshot_accounts_switch_aws.gif["Capture d'écran indiquant la sélecti
 
 Si vous souhaitez déployer Cloud Volumes ONTAP sur différents comptes Azure, vous devez fournir les autorisations requises pour ces comptes, puis ajouter des informations sur ces comptes à Cloud Manager.
 
-*  Azure permissions using a service principal
-*  Azure accounts to Cloud Manager
+* <<Octroi d'autorisations Azure à l'aide d'une entité de sécurité de service>>
+* <<Ajout de comptes Azure à Cloud Manager>>
 
 
 
@@ -127,6 +130,7 @@ Si vous souhaitez déployer Cloud Volumes ONTAP sur différents comptes Azure, v
 
 Cloud Manager a besoin d'autorisations pour effectuer des actions dans Azure. Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une entité de sécurité de service dans Azure Active Directory et en obtenant les informations d'identification Azure requises par Cloud Manager.
 
+.Description de la tâche
 L'image suivante illustre comment Cloud Manager obtient les autorisations nécessaires pour effectuer des opérations dans Azure. Un objet principal de service, lié à un ou plusieurs abonnements Azure, représente Cloud Manager dans Azure Active Directory et est affecté à un rôle personnalisé qui permet les autorisations requises.
 
 image:diagram_azure_authentication.png["Image conceptuelle montrant que Cloud Manager obtient l'authentification et l'autorisation d'Azure Active Directory avant de pouvoir passer un appel API. Dans Active Directory, le rôle de l'opérateur Cloud Manager définit les autorisations. Il est lié à un ou plusieurs abonnements Azure et à un objet principal de service qui représente l'application Cloud Manager."]
@@ -135,9 +139,9 @@ image:diagram_azure_authentication.png["Image conceptuelle montrant que Cloud Ma
 NOTE: Les étapes suivantes utilisent le nouveau portail Azure. Si vous rencontrez des problèmes, vous devez utiliser le portail Azure classique.
 
 .Étapes
-.  a custom role with the required Cloud Manager permissions,Créez un rôle personnalisé avec les autorisations Cloud Manager requises.
-.  an Active Directory service principal,Créez un principal de service Active Directory.
-.  the Cloud Manager Operator role to the service principal,Attribuez le rôle d'opérateur Cloud Manager personnalisé à l'entité principal de service.
+. <<Création d'un rôle personnalisé avec les autorisations Cloud Manager requises,Créez un rôle personnalisé avec les autorisations Cloud Manager requises>>.
+. <<Création d'un principal de service Active Directory,Créez un principal de service Active Directory>>.
+. <<Attribution du rôle d'opérateur Cloud Manager au principal de service,Attribuez le rôle d'opérateur Cloud Manager personnalisé à l'entité principal de service>>.
 
 
 
@@ -172,6 +176,7 @@ L'exemple suivant montre comment créer un rôle personnalisé à l'aide de l'in
 
 
 
+.Résultat
 Vous devez maintenant disposer d'un rôle personnalisé appelé opérateur OnCommand Cloud Manager.
 
 
@@ -180,6 +185,7 @@ Vous devez maintenant disposer d'un rôle personnalisé appelé opérateur OnCom
 
 Vous devez créer un principal de service Active Directory pour que Cloud Manager puisse s'authentifier auprès d'Azure Active Directory.
 
+.Avant de commencer
 Vous devez disposer des autorisations appropriées dans Azure pour créer une application Active Directory et attribuer l'application à un rôle. Pour plus de détails, reportez-vous à https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/["Documentation Microsoft Azure : utilisez le portail pour créer une application Active Directory et un service principal pouvant accéder aux ressources"^].
 
 .Étapes
@@ -240,6 +246,7 @@ Comme l'ID d'application et la clé d'application, vous devez entrer l'ID de loc
 
 
 
+.Résultat
 Vous devez maintenant disposer d'un principal de service Active Directory et copier l'ID de l'application, la clé d'application et l'ID du locataire Active Directory. Vous devez saisir ces informations dans Cloud Manager lorsque vous ajoutez un compte de fournisseur cloud.
 
 
@@ -248,6 +255,7 @@ Vous devez maintenant disposer d'un principal de service Active Directory et cop
 
 Vous devez associer le principal de service à un ou plusieurs abonnements Azure et lui attribuer le rôle d'opérateur Cloud Manager pour que Cloud Manager dispose des autorisations dans Azure.
 
+.Description de la tâche
 Si vous souhaitez déployer Cloud Volumes ONTAP à partir de plusieurs abonnements Azure, vous devez lier le principal de service à chacun de ces abonnements. Cloud Manager vous permet de sélectionner l'abonnement que vous souhaitez utiliser lors du déploiement de Cloud Volumes ONTAP.
 
 .Étapes
@@ -259,6 +267,7 @@ Si vous souhaitez déployer Cloud Volumes ONTAP à partir de plusieurs abonnemen
 . Sélectionnez l'application, cliquez sur *Sélectionner*, puis sur *OK*.
 
 
+.Résultat
 Le principal de service de Cloud Manager dispose désormais des autorisations Azure requises.
 
 
@@ -274,6 +283,7 @@ Une fois que vous avez autorisé à fournir un compte Azure, vous pouvez l'ajout
 . Vérifiez que les exigences de la stratégie ont été respectées, puis cliquez sur *Créer un compte*.
 
 
+.Résultat
 Vous pouvez maintenant passer à un autre compte à partir de la page Détails et informations d'identification lors de la création d'un nouvel environnement de travail :
 
 image:screenshot_accounts_switch_azure.gif["Capture d'écran indiquant la sélection entre les comptes fournisseurs de services cloud après avoir cliqué sur changer de compte dans la page Détails etamp ; informations d'identification."]
@@ -284,6 +294,7 @@ image:screenshot_accounts_switch_azure.gif["Capture d'écran indiquant la sélec
 
 Cloud Manager vous permet de choisir le compte et l'abonnement Azure dans lesquels vous souhaitez déployer Cloud Volumes ONTAP. Vous ne pouvez pas sélectionner un autre abonnement Azure pour le profil d'identité gérée à moins d'associer le https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identité gérée"^] avec ces abonnements.
 
+.Description de la tâche
 Une identité gérée est la première link:concept_accounts_and_permissions.html["compte de fournisseur cloud"] Lorsque vous déployez Cloud Manager à partir de NetApp Cloud Central. Lorsque vous avez déployé Cloud Manager, Cloud Central a créé le rôle OnCommand Cloud Manager Operator et l'a affecté à la machine virtuelle Cloud Manager.
 
 .Étapes
@@ -309,6 +320,7 @@ NOTE: L'opérateur OnCommand Cloud Manager est le nom par défaut fourni dans ht
 . Répétez ces étapes pour les abonnements supplémentaires.
 
 
+.Résultat
 Lorsque vous créez un nouvel environnement de travail, vous devriez désormais pouvoir sélectionner plusieurs abonnements Azure pour le profil d'identité géré.
 
 image:screenshot_accounts_switch_azure_subscription.gif["Capture d'écran indiquant la possibilité de sélectionner plusieurs abonnements Azure lors de la sélection d'un compte Microsoft Azure Provider."]

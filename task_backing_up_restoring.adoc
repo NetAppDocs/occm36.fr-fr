@@ -44,4 +44,5 @@ La restauration de Cloud Manager à partir d'une sauvegarde remplace les donnée
 . Sélectionnez la sauvegarde.
 
 
+.Résultat
 Cloud Manager restaure la base de données à partir du fichier de sauvegarde.

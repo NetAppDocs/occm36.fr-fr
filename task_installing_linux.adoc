@@ -94,6 +94,7 @@ _Port_ est nécessaire si vous avez modifié les ports HTTP (80) ou HTTPS (443) 
 . Après vous être connecté, entrez un nom pour ce système Cloud Manager.
 
 
+.Une fois que vous avez terminé
 Configurez des autorisations pour vos comptes AWS et Azure afin que Cloud Manager puisse déployer Cloud Volumes ONTAP :
 
 * Si vous souhaitez déployer Cloud Volumes ONTAP dans AWS, link:task_adding_cloud_accounts.html["Configurez un compte AWS, puis ajoutez-le à Cloud Manager"].

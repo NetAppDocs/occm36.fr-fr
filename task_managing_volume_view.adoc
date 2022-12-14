@@ -22,6 +22,7 @@ Vous pouvez gérer les volumes NFS en les clonant, en gérant l'accès aux donn�
 
 Si vous avez besoin d'une copie instantanée de vos données sans utiliser beaucoup d'espace disque, vous pouvez créer un clone d'un volume existant.
 
+.Description de la tâche
 Le volume cloné est une copie inscriptible, ponctuelle et efficace en termes d'espace, car il utilise une petite quantité d'espace pour les métadonnées, puis ne consomme que de l'espace supplémentaire lorsque les données sont modifiées ou ajoutées.
 
 .Étapes
@@ -29,6 +30,7 @@ Le volume cloné est une copie inscriptible, ponctuelle et efficace en termes d'
 . Modifiez le nom du volume cloné, si nécessaire, puis cliquez sur *Clone*.
 
 
+.Résultat
 Cloud Manager crée un nouveau volume qui est un clone d'un volume existant.
 
 
@@ -53,6 +55,7 @@ Vous pouvez modifier le disque AWS sous-jacent qu'un volume utilise pour fournir
 . Sélectionnez le type de disque AWS et cliquez sur *Modifier*.
 
 
+.Résultat
 Cloud Manager déplace le volume vers un agrégat existant qui utilise le type de disque sélectionné ou crée un nouvel agrégat pour le volume.
 
 

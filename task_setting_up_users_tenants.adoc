@@ -32,6 +32,7 @@ Attendez que l'utilisateur confirme qu'il s'est inscrit à un compte.
 . Entrez l'adresse e-mail associée au compte d'utilisateur, sélectionnez un rôle et cliquez sur *Ajouter*.
 
 
+.Et la suite ?
 Informez l'utilisateur qu'il peut désormais se connecter au système Cloud Manager.
 
 
@@ -49,4 +50,5 @@ image:screenshot_tenants_icon.gif["Capture d'écran : affiche l'icône de locata
 . Cliquez sur *Enregistrer*.
 
 
+.Et la suite ?
 Vous pouvez à présent passer à ce nouveau locataire et ajouter à ce locataire les administrateurs des locataires et de l'environnement de travail.
