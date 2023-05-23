@@ -37,7 +37,7 @@ image:screenshot_enabling_worm.gif["Affiche l'option WORM disponible lors de la 
 
 Vous pouvez utiliser une application pour valider des fichiers sur WORM via NFS ou CIFS, ou utiliser l'interface de ligne de commande ONTAP pour auto-valider des fichiers sur WORM automatiquement. Vous pouvez également utiliser un fichier WORM inscriptible pour conserver les données écrites de façon incrémentielle, comme les informations de journal.
 
-Après avoir activé le stockage WORM sur un système Cloud Volumes ONTAP, vous devez utiliser l'interface de ligne de commande ONTAP pour toute la gestion du stockage WORM. Pour obtenir des instructions, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-arch-con/home.html["Documentation ONTAP"^].
+Après avoir activé le stockage WORM sur un système Cloud Volumes ONTAP, vous devez utiliser l'interface de ligne de commande ONTAP pour toute la gestion du stockage WORM. Pour obtenir des instructions, reportez-vous à la section http://["Documentation ONTAP"^].
 
 
 NOTE: La prise en charge de Cloud Volumes ONTAP pour le stockage WORM équivaut au mode SnapLock Enterprise.

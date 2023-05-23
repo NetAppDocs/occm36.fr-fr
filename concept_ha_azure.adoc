@@ -59,7 +59,7 @@ Pour les configurations NAS, les adresses IP des données migrent automatiquemen
 Pour iSCSI, Cloud Volumes ONTAP utilise les E/S multichemins (MPIO) et l'accès aux unités logiques asymétriques (ALUA) pour gérer le basculement de chemin entre les chemins optimisés et non optimisés.
 
 
-NOTE: Pour plus d'informations sur les configurations hôtes spécifiques qui prennent en charge ALUA, consultez le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Et le Guide d'installation et de configuration des utilitaires hôtes pour votre système d'exploitation hôte.
+NOTE: Pour plus d'informations sur les configurations hôtes spécifiques qui prennent en charge ALUA, consultez le http://["Matrice d'interopérabilité NetApp"^] Et le Guide d'installation et de configuration des utilitaires hôtes pour votre système d'exploitation hôte.
 
 
 
@@ -78,7 +78,7 @@ Les limites suivantes affectent les paires HA Cloud Volumes ONTAP dans Azure :
 * NFSv4 n'est pas pris en charge. NFSv3 est pris en charge.
 * Les paires HA ne sont pas prises en charge dans certaines régions.
 +
-https://cloud.netapp.com/cloud-volumes-global-regions["Consultez la liste des régions Azure prises en charge"^].
+https://["Consultez la liste des régions Azure prises en charge"^].
 
 
 

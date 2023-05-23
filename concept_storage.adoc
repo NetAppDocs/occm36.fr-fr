@@ -48,11 +48,11 @@ Le type de disque EBS sous-jacent peut être SSD à usage général, SSD IOPS pr
 
 NOTE: Les disques durs inactifs ne sont pas pris en charge avec les configurations haute disponibilité et le Tiering des données.
 
-Pour plus de détails sur les cas d'utilisation de ces disques, reportez-vous à http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
+Pour plus de détails sur les cas d'utilisation de ces disques, reportez-vous à http://["Documentation AWS : types de volume EBS"^].
 
 link:task_planning_your_config.html#sizing-your-system-in-aws["Découvrez comment choisir les types et les tailles de disques pour vos systèmes dans AWS"].
 
-https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Consultez les limites de stockage pour Cloud Volumes ONTAP"].
+https://["Consultez les limites de stockage pour Cloud Volumes ONTAP"].
 
 
 
@@ -78,8 +78,8 @@ Vous pouvez coupler un disque géré avec le stockage Azure Blob pour link:conce
 Paires HA:: Les paires HAUTE DISPONIBILITÉ utilisent des objets blob de pages Premium qui ont une taille de disque maximale de 8 To.
 
 
-Pour plus d'informations sur les cas d'utilisation de ces disques, reportez-vous à la section https://azure.microsoft.com/documentation/articles/storage-introduction/["Documentation Microsoft Azure : présentation du stockage Microsoft Azure"^].
+Pour plus d'informations sur les cas d'utilisation de ces disques, reportez-vous à la section https://["Documentation Microsoft Azure : présentation du stockage Microsoft Azure"^].
 
 link:task_planning_your_config.html#sizing-your-system-in-azure["Découvrez comment choisir les types et les tailles de disques pour vos systèmes dans Azure"].
 
-https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Consultez les limites de stockage pour Cloud Volumes ONTAP"].
+https://["Consultez les limites de stockage pour Cloud Volumes ONTAP"].

@@ -84,7 +84,7 @@ La communication de données entre VPC n'est pas un problème car iSCSI n'utilis
 Pour iSCSI, Cloud Volumes ONTAP utilise les E/S multichemins (MPIO) et l'accès aux unités logiques asymétriques (ALUA) pour gérer le basculement de chemin entre les chemins optimisés et non optimisés.
 
 
-NOTE: Pour plus d'informations sur les configurations hôtes spécifiques qui prennent en charge ALUA, consultez le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Et le Guide d'installation et de configuration des utilitaires hôtes pour votre système d'exploitation hôte.
+NOTE: Pour plus d'informations sur les configurations hôtes spécifiques qui prennent en charge ALUA, consultez le http://["Matrice d'interopérabilité NetApp"^] Et le Guide d'installation et de configuration des utilitaires hôtes pour votre système d'exploitation hôte.
 
 
 
@@ -107,7 +107,7 @@ Vous pouvez facilement identifier l'adresse IP correcte dans Cloud Manager en s�
 Le déploiement d'une configuration HA dans une seule zone de disponibilité (AZ) peut garantir une haute disponibilité de vos données en cas de défaillance d'une instance exécutant un nœud Cloud Volumes ONTAP. Toutes les données sont accessibles en mode natif depuis l'extérieur du VPC.
 
 
-NOTE: Cloud Manager crée un https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["Groupe de placement AWS réparti"^] Et lance les deux nœuds haute disponibilité de ce groupe de placement. Le groupe de placement réduit le risque de défaillances simultanées en répartissant les instances sur un matériel sous-jacent distinct. Cette fonctionnalité améliore la redondance en termes de calcul, et non en termes de défaillance des disques.
+NOTE: Cloud Manager crée un https://["Groupe de placement AWS réparti"^] Et lance les deux nœuds haute disponibilité de ce groupe de placement. Le groupe de placement réduit le risque de défaillances simultanées en répartissant les instances sur un matériel sous-jacent distinct. Cette fonctionnalité améliore la redondance en termes de calcul, et non en termes de défaillance des disques.
 
 
 
@@ -126,7 +126,7 @@ image:diagram_single_az.png["Image conceptuelle montrant une configuration ONTAP
 Pour iSCSI, Cloud Volumes ONTAP utilise les E/S multichemins (MPIO) et l'accès aux unités logiques asymétriques (ALUA) pour gérer le basculement de chemin entre les chemins optimisés et non optimisés.
 
 
-NOTE: Pour plus d'informations sur les configurations hôtes spécifiques qui prennent en charge ALUA, consultez le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Et le Guide d'installation et de configuration des utilitaires hôtes pour votre système d'exploitation hôte.
+NOTE: Pour plus d'informations sur les configurations hôtes spécifiques qui prennent en charge ALUA, consultez le http://["Matrice d'interopérabilité NetApp"^] Et le Guide d'installation et de configuration des utilitaires hôtes pour votre système d'exploitation hôte.
 
 Pour les configurations NAS, les adresses IP des données peuvent migrer entre les nœuds HA en cas de défaillance. Cela garantit l'accès du client au stockage.
 

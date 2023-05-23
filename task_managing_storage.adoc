@@ -48,7 +48,7 @@ Vous pouvez gérer les volumes existants à mesure que vos besoins de stockage c
 
 Ce processus crée un volume FlexClone. Un volume FlexClone est une copie inscriptible, ponctuelle et efficace dans l'espace, car il utilise une petite quantité d'espace pour les métadonnées, puis ne consomme que de l'espace supplémentaire lorsque les données sont modifiées ou ajoutées.
 
-Pour en savoir plus sur les volumes FlexClone, consultez le http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guide de gestion du stockage logique ONTAP 9"^].
+Pour en savoir plus sur les volumes FlexClone, consultez le http://["Guide de gestion du stockage logique ONTAP 9"^].
 
 
 
@@ -280,7 +280,7 @@ Pour plus de détails, voir link:task_replicating_data.html#managing-data-replic
 
 . Configurez le volume pour l'accès aux données.
 +
-Pour plus d'informations sur la configuration d'un volume de destination pour l'accès aux données, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guide rapide de reprise après incident de volumes ONTAP 9"^].
+Pour plus d'informations sur la configuration d'un volume de destination pour l'accès aux données, reportez-vous à la section http://["Guide rapide de reprise après incident de volumes ONTAP 9"^].
 
 . Supprimez le volume d'origine.
 +
@@ -321,6 +321,6 @@ Pour plus de détails, voir link:task_provisioning_storage.html#creating-aggrega
 . Utilisez System Manager ou l'interface de ligne de commande pour déplacer les volumes vers l'agrégat.
 . Dans la plupart des cas, vous pouvez utiliser System Manager pour déplacer des volumes.
 +
-Pour obtenir des instructions, reportez-vous au http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guide de migration de volumes ONTAP 9 Express"^].
+Pour obtenir des instructions, reportez-vous au http://["Guide de migration de volumes ONTAP 9 Express"^].
 
 

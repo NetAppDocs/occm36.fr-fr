@@ -50,11 +50,11 @@ Vous pouvez activer le tiering des données lors de l'utilisation de configurati
 
 == Exigences relatives aux données de hiérarchisation dans AWS
 
-Vous devez vous assurer que Cloud Volumes ONTAP dispose d'une connexion à S3. La meilleure façon de fournir cette connexion est de créer un terminal VPC vers le service S3. Pour obtenir des instructions, reportez-vous à la section https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentation AWS : création d'un terminal de passerelle"^].
+Vous devez vous assurer que Cloud Volumes ONTAP dispose d'une connexion à S3. La meilleure façon de fournir cette connexion est de créer un terminal VPC vers le service S3. Pour obtenir des instructions, reportez-vous à la section https://["Documentation AWS : création d'un terminal de passerelle"^].
 
 Lorsque vous créez le terminal VPC, veillez à sélectionner la région, le VPC et la table de routage correspondant à l'instance Cloud Volumes ONTAP. Vous devez également modifier le groupe de sécurité pour ajouter une règle HTTPS sortante qui active le trafic vers le terminal S3. Dans le cas contraire, Cloud Volumes ONTAP ne peut pas se connecter au service S3.
 
-Si vous rencontrez des problèmes, reportez-vous à la section https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["Centre de connaissances du support AWS : pourquoi ne puis-je pas me connecter à un compartiment S3 à l'aide d'un terminal VPC de passerelle ?"^].
+Si vous rencontrez des problèmes, reportez-vous à la section https://["Centre de connaissances du support AWS : pourquoi ne puis-je pas me connecter à un compartiment S3 à l'aide d'un terminal VPC de passerelle ?"^].
 
 
 
@@ -67,7 +67,7 @@ Vous n'avez pas besoin de configurer une connexion entre le niveau de performanc
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-Ces autorisations sont incluses dans la dernière version https://mysupport.netapp.com/cloudontap/iampolicies["Politique de Cloud Manager"].
+Ces autorisations sont incluses dans la dernière version https://["Politique de Cloud Manager"].
 
 
 

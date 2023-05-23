@@ -14,7 +14,7 @@ summary: 'Il est préférable de lancer Cloud Manager dans AWS à l"aide de NetA
 
 
 [role="lead"]
-Il est recommandé de lancer Cloud Manager dans AWS à l'aide de https://cloud.netapp.com["NetApp Cloud Central"^], Mais vous pouvez le lancer depuis AWS Marketplace, si nécessaire.
+Il est recommandé de lancer Cloud Manager dans AWS à l'aide de https://["NetApp Cloud Central"^], Mais vous pouvez le lancer depuis AWS Marketplace, si nécessaire.
 
 
 TIP: Si vous lancez Cloud Manager à partir d'AWS Marketplace, Cloud Manager est toujours intégré à NetApp Cloud Central. link:concept_cloud_central.html["En savoir plus sur l'intégration"].
@@ -27,13 +27,13 @@ La procédure suivante décrit le lancement de l'instance à partir de la consol
 +
 .. Téléchargez la politique IAM de Cloud Manager à partir de l'emplacement suivant :
 +
-https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Manager : Politiques AWS et Azure"^]
+https://["NetApp OnCommand Cloud Manager : Politiques AWS et Azure"^]
 
 .. À partir de la console IAM, créez votre propre stratégie en copiant et en collant le texte de la stratégie IAM de Cloud Manager.
 .. Créez un rôle IAM avec le type de rôle Amazon EC2 et associez la stratégie que vous avez créée à l'étape précédente au rôle.
 
 
-. Accédez au https://aws.amazon.com/marketplace/pp/B018REK8QG["Page Cloud Manager sur AWS Marketplace"^].
+. Accédez au https://["Page Cloud Manager sur AWS Marketplace"^].
 . Cliquez sur *Continuer*.
 . Dans l'onglet lancement personnalisé, cliquez sur *lancer avec la console EC2* pour votre région, puis effectuez vos sélections :
 +

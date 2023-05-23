@@ -37,7 +37,7 @@ Vous pouvez sélectionner l'environnement de travail pour consulter le message.
 Si vous ne renouvelez pas la licence à temps, le système Cloud Volumes ONTAP s'arrête. Si vous le redémarrez, il s'arrête de nouveau.
 
 
-NOTE: Cloud Volumes ONTAP peut également vous avertir par e-mail, par un poste SNMP ou par un serveur syslog à l'aide de notifications d'événements EMS (Event Management System). Pour obtenir des instructions, reportez-vous au http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["Guide de configuration rapide de ONTAP 9 EMS"^].
+NOTE: Cloud Volumes ONTAP peut également vous avertir par e-mail, par un poste SNMP ou par un serveur syslog à l'aide de notifications d'événements EMS (Event Management System). Pour obtenir des instructions, reportez-vous au http://["Guide de configuration rapide de ONTAP 9 EMS"^].
 
 [discrete]
 === Renouvellement de la licence

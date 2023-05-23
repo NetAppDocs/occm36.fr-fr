@@ -77,7 +77,7 @@ Les mises à niveau des paires HA sont sans interruption. Une mise à niveau san
 
 La version de ONTAP que vous pouvez mettre à niveau ou rétrograder varie en fonction de la version de ONTAP actuellement exécutée sur votre système.
 
-Pour comprendre les exigences de version, reportez-vous à la section http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html["Documentation ONTAP 9 : configuration requise pour la mise à jour du cluster"^].
+Pour comprendre les exigences de version, reportez-vous à la section http://["Documentation ONTAP 9 : configuration requise pour la mise à jour du cluster"^].
 
 
 
@@ -172,7 +172,7 @@ Vous pouvez placer l'image du logiciel Cloud Volumes ONTAP sur un serveur HTTP o
 
 NOTE: Le groupe de sécurité Cloud Volumes ONTAP prédéfini autorise les connexions HTTP et FTP sortantes par défaut.
 
-. Obtenez l'image logicielle de https://mysupport.netapp.com/products/p/cloud_ontap.html["Le site de support NetApp"^].
+. Obtenez l'image logicielle de https://["Le site de support NetApp"^].
 . Copiez l'image du logiciel dans le répertoire du serveur HTTP ou FTP à partir duquel le fichier sera servi.
 . Dans l'environnement de travail de Cloud Manager, cliquez sur l'icône de menu, puis sur *Avancé > mettre à jour Cloud Volumes ONTAP*.
 . Sur la page de mise à jour du logiciel, choisissez *sélectionnez une image disponible à partir d'une URL*, saisissez l'URL, puis cliquez sur *Modifier l'image*.

@@ -79,7 +79,7 @@ NOTE: Le basculement LIF est désactivé par défaut pour Cloud Volumes ONTAP en
 
 
 * Cloud Volumes ONTAP envoie des sauvegardes de configuration à Cloud Manager via HTTPS.
-* Lorsque vous êtes connecté à Cloud Manager, les sauvegardes sont accessibles depuis https://ipaddress/occm/offboxconfig/[]
+* Lorsque vous êtes connecté à Cloud Manager, les sauvegardes sont accessibles depuis https://[]
 * Cloud Manager définit quelques attributs de volume différemment des autres outils de gestion (System Manager ou CLI, par exemple).
 +
 Le tableau suivant répertorie les attributs de volume définis par Cloud Manager différemment des valeurs par défaut :

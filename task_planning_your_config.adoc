@@ -22,9 +22,9 @@ Lorsque vous déployez Cloud Volumes ONTAP, vous pouvez soit choisir un système
 
 Cloud Volumes ONTAP est disponible dans AWS et Azure avec deux options de tarification : le paiement à l'utilisation ou le modèle BYOL (où vous apportez votre propre licence). Le paiement basé sur l'utilisation vous permet de choisir entre trois licences : explore, Standard ou Premium. Chacune d'elles fournit une capacité distincte et des options de calcul différentes.
 
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Configurations prises en charge pour Cloud Volumes ONTAP 9.5"^]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_94.html["Configurations prises en charge pour Cloud Volumes ONTAP 9.4"^]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_93.html["Configurations prises en charge pour ONTAP Cloud 9.3"^]
+* https://["Configurations prises en charge pour Cloud Volumes ONTAP 9.5"^]
+* https://["Configurations prises en charge pour Cloud Volumes ONTAP 9.4"^]
+* https://["Configurations prises en charge pour ONTAP Cloud 9.3"^]
 
 
 
@@ -33,9 +33,9 @@ Cloud Volumes ONTAP est disponible dans AWS et Azure avec deux options de tarifi
 
 La limite de capacité brute d'un système Cloud Volumes ONTAP dépend de la licence. Des limites supplémentaires ont un impact sur la taille des agrégats et des volumes. Il est important de connaître ces dernières lors de la planification de la configuration.
 
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_storage_limits_95.html["Limites de stockage pour Cloud Volumes ONTAP 9.5"^]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_storage_limits_94.html["Limites de stockage pour Cloud Volumes ONTAP 9.4"^]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_storage_limits_93.html["Limites de stockage pour le cloud ONTAP 9.3"^]
+* https://["Limites de stockage pour Cloud Volumes ONTAP 9.5"^]
+* https://["Limites de stockage pour Cloud Volumes ONTAP 9.4"^]
+* https://["Limites de stockage pour le cloud ONTAP 9.3"^]
 
 
 
@@ -51,13 +51,13 @@ Type d'instance::
 * Si plusieurs utilisateurs écrivent dans le système en même temps, choisissez un type d'instance disposant de suffisamment de processeurs pour gérer les requêtes.
 * Si votre champ d'application implique essentiellement la lecture, optez pour un système disposant de suffisamment de mémoire RAM.
 +
-https://aws.amazon.com/ec2/instance-types/["Documentation AWS : types d'instances Amazon EC2"^]
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html["Documentation AWS : instances optimisées pour Amazon EBS"^]
+https://["Documentation AWS : types d'instances Amazon EC2"^]
+https://["Documentation AWS : instances optimisées pour Amazon EBS"^]
 
 
 
 --
-Type de disque EBS:: Les SSD à usage générique sont les types de disques les plus courants pour les systèmes Cloud Volumes ONTAP. Pour en savoir plus sur les utilisations des disques EBS, reportez-vous à la section http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
+Type de disque EBS:: Les SSD à usage générique sont les types de disques les plus courants pour les systèmes Cloud Volumes ONTAP. Pour en savoir plus sur les utilisations des disques EBS, reportez-vous à la section http://["Documentation AWS : types de volume EBS"^].
 Taille des disques EBS:: Lorsque vous lancez un système Cloud Volumes ONTAP, vous devez choisir une taille de disque initiale. Après cela, vous pouvez link:concept_storage_management.html["Laissez Cloud Manager gérer la capacité d'un système à votre place"], mais si vous voulez link:task_provisioning_storage.html#creating-aggregates["créez des agrégats vous-même"], soyez conscient des éléments suivants :
 +
 --
@@ -66,7 +66,7 @@ Taille des disques EBS:: Lorsque vous lancez un système Cloud Volumes ONTAP, vo
 * Finalement, vous devez choisir la taille de disque qui vous donne le _performances soutenues_ dont vous avez besoin.
 * Même si vous choisissez des disques de plus grande capacité (par exemple, six disques de 4 To), vous risquez de ne pas obtenir tous les IOPS, car l'instance EC2 peut atteindre sa limite de bande passante.
 +
-Pour en savoir plus sur les performances des disques EBS, consultez la http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
+Pour en savoir plus sur les performances des disques EBS, consultez la http://["Documentation AWS : types de volume EBS"^].
 
 
 
@@ -82,11 +82,11 @@ video::GELcXmOuYPw[youtube,width=848,height=480]
 
 Le dimensionnement du système Cloud Volumes ONTAP permet de répondre à vos besoins de performance et de capacité. Quelques points clés sont à noter lors de la sélection d'un type de VM, d'un type de disque et d'une taille de disque :
 
-Type de machine virtuelle:: Examinez les types de machines virtuelles prises en charge dans le http://docs.netapp.com/cloud-volumes-ontap/us-en/index.html["Notes de version de Cloud Volumes ONTAP"^] Examinez ensuite toutes les informations sur chaque type de machine virtuelle pris en charge. Notez que chaque type de VM prend en charge un nombre spécifique de disques de données.
+Type de machine virtuelle:: Examinez les types de machines virtuelles prises en charge dans le http://["Notes de version de Cloud Volumes ONTAP"^] Examinez ensuite toutes les informations sur chaque type de machine virtuelle pris en charge. Notez que chaque type de VM prend en charge un nombre spécifique de disques de données.
 +
 --
-* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general#dsv2-series["Documentation Azure : tailles de machine virtuelle à usage général"^]
-* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15["Documentation Azure : tailles de machines virtuelles optimisées pour la mémoire"^]
+* https://["Documentation Azure : tailles de machine virtuelle à usage général"^]
+* https://["Documentation Azure : tailles de machines virtuelles optimisées pour la mémoire"^]
 
 
 --
@@ -99,7 +99,7 @@ Les systèmes HAUTE DISPONIBILITÉ utilisent des objets blob de pages Premium. E
 * _Des disques gérés SSD standard_ assurent des performances prévisibles pour les charges de travail nécessitant un faible niveau d'IOPS.
 * _Les disques gérés HDD standard_ sont un bon choix si vous n'avez pas besoin d'IOPS élevées et souhaitez réduire vos coûts.
 +
-Pour plus d'informations sur les cas d'utilisation de ces disques, reportez-vous à la section https://azure.microsoft.com/documentation/articles/storage-introduction/["Documentation Microsoft Azure : présentation du stockage Microsoft Azure"^].
+Pour plus d'informations sur les cas d'utilisation de ces disques, reportez-vous à la section https://["Documentation Microsoft Azure : présentation du stockage Microsoft Azure"^].
 
 
 
@@ -118,8 +118,8 @@ Avec un stockage standard, les performances sont les mêmes pour toutes les tail
 
 Pour les IOPS et le débit par taille de disque, consultez Azure :
 
-* https://azure.microsoft.com/en-us/pricing/details/managed-disks/["Microsoft Azure : tarification des disques gérés"^]
-* https://azure.microsoft.com/en-us/pricing/details/storage/page-blobs/["Microsoft Azure : tarification Blobs de page"^]
+* https://["Microsoft Azure : tarification des disques gérés"^]
+* https://["Microsoft Azure : tarification Blobs de page"^]
 
 
 --

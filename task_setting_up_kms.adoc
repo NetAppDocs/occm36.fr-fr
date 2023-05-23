@@ -22,14 +22,14 @@ Si vous souhaitez utiliser le chiffrement Amazon avec Cloud Volumes ONTAP, vous 
 La CMK peut être une CMK gérée par AWS ou une CMK gérée par le client. Il peut être hébergé sur le même compte AWS que Cloud Manager et Cloud Volumes ONTAP ou dans un autre compte AWS.
 
 +
-https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys["Documentation AWS : clés principales client (CMK)"^]
+https://["Documentation AWS : clés principales client (CMK)"^]
 
 . Modifiez la stratégie clé pour chaque CMK en ajoutant le rôle IAM qui fournit des autorisations à Cloud Manager en tant que _utilisateur clé_.
 +
 L'ajout du rôle IAM en tant qu'utilisateur clé donne aux utilisateurs Cloud Manager les autorisations d'utiliser le CMK avec Cloud Volumes ONTAP.
 
 +
-https://docs.aws.amazon.com/kms/latest/developerguide/editing-keys.html["Documentation AWS : modification des clés"^]
+https://["Documentation AWS : modification des clés"^]
 
 . Si le CMK se trouve dans un autre compte AWS, procédez comme suit :
 +
@@ -96,7 +96,7 @@ La règle suivante fournit les autorisations requises par Cloud Manager pour uti
 }
 ----
 +
-Pour plus d'informations sur ce processus, reportez-vous à la section https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html#key-policy-modifying-external-accounts["Documentation AWS : autoriser les comptes AWS externes à accéder à un CMK"^].
+Pour plus d'informations sur ce processus, reportez-vous à la section https://["Documentation AWS : autoriser les comptes AWS externes à accéder à un CMK"^].
 
 
 

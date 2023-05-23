@@ -48,7 +48,7 @@ Un seul accès à Zone-Infrequent:: Pour les données rarement accessibles stock
 Accès autonome et peu fréquent:: Pour les données rarement accessibles stockées dans plusieurs zones de disponibilité.
 
 
-Les coûts d'accès sont plus élevés si vous accédez aux données. Vous devez donc en tenir compte avant de modifier le niveau de hiérarchisation. Pour plus d'informations sur les classes de stockage S3, reportez-vous à https://aws.amazon.com/s3/storage-classes["Documentation AWS"^].
+Les coûts d'accès sont plus élevés si vous accédez aux données. Vous devez donc en tenir compte avant de modifier le niveau de hiérarchisation. Pour plus d'informations sur les classes de stockage S3, reportez-vous à https://["Documentation AWS"^].
 
 Lorsque vous modifiez le niveau de Tiering, les données inactives commencent dans la classe de stockage Standard et sont déplacées vers la classe de stockage que vous avez sélectionnée, si les données ne sont pas accessibles après 30 jours. Pour plus d'informations sur la modification du niveau de hiérarchisation, voir link:task_tiering.html["Tiering des données inactives vers un stockage objet à faible coût"].
 
@@ -79,7 +79,7 @@ Par défaut, Cloud Volumes ONTAP transfère les données inactives vers le nivea
 
 Si vous ne prévoyez pas d'accéder aux données inactives, vous pouvez réduire vos coûts de stockage en modifiant le niveau de Tiering d'un système vers le niveau de stockage Azure _cool_ après le déploiement de Cloud Volumes ONTAP. Le niveau cool est idéal pour les données rarement accessibles qui résident dans le niveau pendant au moins 30 jours.
 
-Les coûts d'accès sont plus élevés si vous accédez aux données. Vous devez donc en tenir compte avant de modifier le niveau de hiérarchisation. Pour plus d'informations sur les niveaux de stockage Azure Blob, consultez https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Documentation Azure"^].
+Les coûts d'accès sont plus élevés si vous accédez aux données. Vous devez donc en tenir compte avant de modifier le niveau de hiérarchisation. Pour plus d'informations sur les niveaux de stockage Azure Blob, consultez https://["Documentation Azure"^].
 
 Lorsque vous modifiez le niveau de Tiering, les données inactives commencent dans le Tier de stockage à chaud et sont déplacées vers le Tier de stockage froid, si les données ne sont pas accessibles après 30 jours. Pour plus d'informations sur la modification du niveau de hiérarchisation, voir link:task_tiering.html["Tiering des données inactives vers un stockage objet à faible coût"].
 

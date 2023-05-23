@@ -37,7 +37,7 @@ Un point de terminaison VPC est requis si vous souhaitez transférer des donnée
 === image:number2.png["Numéro 2"] Abonnez-vous à Cloud Volumes ONTAP depuis AWS Marketplace
 
 [role="quick-margin-para"]
-Abonnement de https://aws.amazon.com/marketplace/search/results?page=1&searchTerms=netapp+cloud+volumes+ontap["AWS Marketplace"^] est obligatoire pour accepter les termes du logiciel. Vous ne devez vous abonner qu'à partir du Marketplace. Le lancement de Cloud Volumes ONTAP n'importe où, mais Cloud Manager n'est pas pris en charge.
+Abonnement de https://["AWS Marketplace"^] est obligatoire pour accepter les termes du logiciel. Vous ne devez vous abonner qu'à partir du Marketplace. Le lancement de Cloud Volumes ONTAP n'importe où, mais Cloud Manager n'est pas pris en charge.
 
 
 
@@ -47,7 +47,7 @@ Abonnement de https://aws.amazon.com/marketplace/search/results?page=1&searchTer
 Lorsque vous déployez Cloud Manager à partir de NetApp Cloud Central, vous devez utiliser un compte AWS qui dispose des autorisations nécessaires pour déployer l'instance.
 
 [role="quick-margin-list"]
-. Accédez à la console IAM AWS et créez une règle en copiant et en collant le contenu du https://mysupport.netapp.com/cloudontap/iampolicies["Politique NetApp Cloud Central pour AWS"^].
+. Accédez à la console IAM AWS et créez une règle en copiant et en collant le contenu du https://["Politique NetApp Cloud Central pour AWS"^].
 . Associez la stratégie à l'utilisateur IAM.
 
 
@@ -56,7 +56,7 @@ Lorsque vous déployez Cloud Manager à partir de NetApp Cloud Central, vous dev
 === image:number4.png["Numéro 4"] Lancez Cloud Manager à partir de NetApp Cloud Central
 
 [role="quick-margin-para"]
-Le logiciel Cloud Manager est requis pour déployer et gérer Cloud Volumes ONTAP. Quelques minutes suffisent pour lancer une instance Cloud Manager à partir de https://cloud.netapp.com["Cloud Central"^].
+Le logiciel Cloud Manager est requis pour déployer et gérer Cloud Volumes ONTAP. Quelques minutes suffisent pour lancer une instance Cloud Manager à partir de https://["Cloud Central"^].
 
 
 

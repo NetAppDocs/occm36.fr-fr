@@ -35,7 +35,7 @@ Vous pouvez utiliser NetApp Volume Encryption avec chiffrement AWS et Azure nati
 
 NetApp Volume Encryption (NVE) est une technologie logicielle de chiffrement des données au repos d'un volume à la fois. Les données, les copies Snapshot et les métadonnées sont chiffrées. L'accès aux données est donné par une clé XTS-AES-256 unique, une par volume.
 
-Cloud Volumes ONTAP prend en charge NetApp Volume Encryption avec un serveur de gestion externe des clés. Un gestionnaire de clés intégré n'est pas pris en charge. Vous trouverez les gestionnaires de clés pris en charge dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Sous la solution *gestionnaires de clés*.
+Cloud Volumes ONTAP prend en charge NetApp Volume Encryption avec un serveur de gestion externe des clés. Un gestionnaire de clés intégré n'est pas pris en charge. Vous trouverez les gestionnaires de clés pris en charge dans le http://["Matrice d'interopérabilité NetApp"^] Sous la solution *gestionnaires de clés*.
 
 Vous pouvez activer NetApp Volume Encryption sur un volume nouveau ou existant à l'aide de l'interface de ligne de commande ou de System Manager. Cloud Manager ne prend pas en charge NetApp Volume Encryption. Pour obtenir des instructions, reportez-vous à la section link:task_encrypting_volumes.html["Chiffrement de volumes avec NetApp Volume Encryption"].
 
@@ -43,7 +43,7 @@ Vous pouvez activer NetApp Volume Encryption sur un volume nouveau ou existant �
 
 === Service de gestion des clés AWS
 
-Lorsque vous lancez un système Cloud Volumes ONTAP dans AWS, vous pouvez activer le chiffrement des données à l'aide du http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS Key Management Service (KMS)"^]. Cloud Manager demande des clés de données à l'aide d'une clé principale client (CMK).
+Lorsque vous lancez un système Cloud Volumes ONTAP dans AWS, vous pouvez activer le chiffrement des données à l'aide du http://["AWS Key Management Service (KMS)"^]. Cloud Manager demande des clés de données à l'aide d'une clé principale client (CMK).
 
 Si vous souhaitez utiliser cette option de cryptage, vous devez vous assurer que le système AWS KMS est correctement configuré. Pour plus de détails, voir link:task_setting_up_kms.html["Configuration du système AWS KMS"].
 
@@ -51,7 +51,7 @@ Si vous souhaitez utiliser cette option de cryptage, vous devez vous assurer que
 
 === Chiffrement de service de stockage Azure
 
-https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/["Chiffrement de service de stockage Azure"^] Les données au repos sont activées par défaut pour les données Cloud Volumes ONTAP dans Azure. Aucune configuration n'est requise.
+https://["Chiffrement de service de stockage Azure"^] Les données au repos sont activées par défaut pour les données Cloud Volumes ONTAP dans Azure. Aucune configuration n'est requise.
 
 
 NOTE: Les clés gérées par les clients ne sont pas prises en charge avec Cloud Volumes ONTAP.
@@ -64,9 +64,9 @@ Vous pouvez utiliser la fonctionnalité antivirus intégrée sur les systèmes O
 
 L'analyse antivirus ONTAP, appelée _Vscan_, associe le meilleur logiciel antivirus tiers à des fonctionnalités ONTAP, vous offrant ainsi la flexibilité nécessaire pour contrôler quels fichiers sont analysés et à quel moment.
 
-Pour plus d'informations sur les fournisseurs, les logiciels et les versions pris en charge par Vscan, voir le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+Pour plus d'informations sur les fournisseurs, les logiciels et les versions pris en charge par Vscan, voir le http://["Matrice d'interopérabilité NetApp"^].
 
-Pour plus d'informations sur la configuration et la gestion de la fonctionnalité antivirus sur les systèmes ONTAP, consultez la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html["Guide de configuration antivirus ONTAP 9"^].
+Pour plus d'informations sur la configuration et la gestion de la fonctionnalité antivirus sur les systèmes ONTAP, consultez la http://["Guide de configuration antivirus ONTAP 9"^].
 
 
 

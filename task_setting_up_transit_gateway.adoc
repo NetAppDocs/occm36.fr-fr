@@ -29,7 +29,7 @@ image:diagram_transit_gateway.png["Un schéma qui montre une configuration haute
 Les étapes suivantes montrent comment configurer une configuration similaire.
 
 .Étapes
-. https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["Créez une passerelle de transit et connectez les VPC à la passerelle"^].
+. https://["Créez une passerelle de transit et connectez les VPC à la passerelle"^].
 . Créer des routes dans la table de routage de la passerelle de transit en spécifiant les adresses IP flottantes de la paire HA.
 +
 Les adresses IP flottantes se trouvent sur la page des informations sur l'environnement de travail dans Cloud Manager. Voici un exemple :

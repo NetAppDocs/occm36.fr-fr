@@ -39,7 +39,7 @@ Connexion de Cloud Volumes ONTAP au stockage Azure Blob pour le hiérarchisation
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-Ces autorisations sont incluses dans la dernière version https://mysupport.netapp.com/cloudontap/iampolicies["Politique de Cloud Manager"].
+Ces autorisations sont incluses dans la dernière version https://["Politique de Cloud Manager"].
 
 Pour plus d'informations sur la configuration du Tiering des données, voir link:task_tiering.html["Tiering des données inactives vers un stockage objet à faible coût"].
 
@@ -47,7 +47,7 @@ Pour plus d'informations sur la configuration du Tiering des données, voir link
 Connexions aux systèmes ONTAP dans d'autres réseaux:: Pour répliquer des données entre un système Cloud Volumes ONTAP sur les systèmes Azure et ONTAP sur d'autres réseaux, vous devez disposer d'une connexion VPN entre Azure VNet et l'autre réseau, par exemple un VPC AWS ou votre réseau d'entreprise.
 +
 --
-Pour obtenir des instructions, reportez-vous à la section https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal["Documentation Microsoft Azure : créez une connexion de site à site dans le portail Azure"^].
+Pour obtenir des instructions, reportez-vous à la section https://["Documentation Microsoft Azure : créez une connexion de site à site dans le portail Azure"^].
 
 --
 

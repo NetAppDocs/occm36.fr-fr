@@ -16,7 +16,7 @@ summary: Déployez Cloud Manager depuis Azure Government Marketplace, puis fourn
 [role="lead"]
 Pour que Cloud Manager soit opérationnel dans une région du gouvernement des États-Unis, commencez par déployer Cloud Manager à partir d'Azure Government Marketplace. Ensuite, fournissez les autorisations dont Cloud Manager a besoin pour déployer et gérer les systèmes Cloud Volumes ONTAP.
 
-Pour obtenir la liste des régions du gouvernement des États-Unis d'Azure prises en charge, reportez-vous à la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+Pour obtenir la liste des régions du gouvernement des États-Unis d'Azure prises en charge, reportez-vous à la section https://["Régions Cloud volumes Global"^].
 
 
 
@@ -45,7 +45,7 @@ Azure déploie la machine virtuelle avec les paramètres spécifiés. La machine
 
 . Ouvrez un navigateur Web à partir d'un hôte qui dispose d'une connexion à la machine virtuelle Cloud Manager et entrez l'URL suivante :
 +
-http://_ipaddress_:80[]
+http://[]
 
 +
 Lorsque vous vous connectez, Cloud Manager ajoute automatiquement votre compte utilisateur en tant qu'administrateur de ce système.
@@ -60,7 +60,7 @@ Cloud Manager est maintenant installé et configuré. Vous devez accorder des au
 
 == Octroi d'autorisations Azure à Cloud Manager à l'aide d'une identité gérée
 
-Le moyen le plus simple de fournir des autorisations est d'activer un https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identité gérée"^] Sur la machine virtuelle Cloud Manager, puis en attribuant les autorisations requises à la machine virtuelle. Si vous le souhaitez, une autre façon est de le faire link:task_adding_cloud_accounts.html#granting-azure-permissions-using-a-service-principal["Accordez des autorisations Azure à l'aide d'une entité de service principale"].
+Le moyen le plus simple de fournir des autorisations est d'activer un https://["identité gérée"^] Sur la machine virtuelle Cloud Manager, puis en attribuant les autorisations requises à la machine virtuelle. Si vous le souhaitez, une autre façon est de le faire link:task_adding_cloud_accounts.html#granting-azure-permissions-using-a-service-principal["Accordez des autorisations Azure à l'aide d'une entité de service principale"].
 
 .Étapes
 . Activer une identité gérée sur la machine virtuelle Cloud Manager :
@@ -71,7 +71,7 @@ Le moyen le plus simple de fournir des autorisations est d'activer un https://do
 
 . Créez un rôle personnalisé à l'aide de la stratégie Cloud Manager :
 +
-.. Téléchargez le https://mysupport.netapp.com/cloudontap/iampolicies["Politique de Cloud Manager Azure"^].
+.. Téléchargez le https://["Politique de Cloud Manager Azure"^].
 .. Modifiez le fichier JSON en ajoutant des identifiants d'abonnement Azure à l'étendue assignable.
 +
 Vous devez ajouter l'ID de chaque abonnement Azure à partir duquel les utilisateurs créeront des systèmes Cloud Volumes ONTAP.
@@ -103,7 +103,7 @@ Vous devez maintenant disposer d'un rôle personnalisé appelé OnCommand Cloud 
 *** Sélectionnez le rôle *opérateur OnCommand Cloud Manager*.
 +
 
-NOTE: L'opérateur OnCommand Cloud Manager est le nom par défaut fourni dans https://mysupport.netapp.com/info/web/ECMP11022837.html["Politique de Cloud Manager"]. Si vous avez choisi un autre nom pour le rôle, sélectionnez-le à la place.
+NOTE: L'opérateur OnCommand Cloud Manager est le nom par défaut fourni dans https://["Politique de Cloud Manager"]. Si vous avez choisi un autre nom pour le rôle, sélectionnez-le à la place.
 
 *** Attribuez l'accès à une *machine virtuelle*.
 *** Sélectionnez l'abonnement dans lequel la machine virtuelle Cloud Manager a été créée.

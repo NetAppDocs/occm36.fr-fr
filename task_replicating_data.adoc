@@ -104,7 +104,7 @@ Si vous créez des règles personnalisées, les étiquettes définies par ces r�
 
 Avant de pouvoir répliquer des données, vous devez confirmer que des exigences spécifiques sont respectées pour les systèmes Cloud Volumes ONTAP et les clusters ONTAP.
 
-Exigences de version:: Vérifiez que les volumes source et de destination exécutent des versions ONTAP compatibles avant de répliquer les données. Pour plus d'informations, reportez-vous à la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-dap/home.html["Guide d'alimentation de la protection des données"^].
+Exigences de version:: Vérifiez que les volumes source et de destination exécutent des versions ONTAP compatibles avant de répliquer les données. Pour plus d'informations, reportez-vous à la http://["Guide d'alimentation de la protection des données"^].
 Exigences spécifiques à Cloud Volumes ONTAP::
 +
 --
@@ -236,7 +236,7 @@ Rétablit une relation interrompue entre les volumes et reprend la réplication 
 
 IMPORTANT: Lorsque vous resynchronisez les volumes, le contenu du volume de destination est remplacé par le contenu du volume source.
 
-Pour effectuer une resynchronisation inverse, qui resynchronise les données du volume de destination vers le volume source, consultez la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guide rapide de reprise après incident de volumes ONTAP 9"^].
+Pour effectuer une resynchronisation inverse, qui resynchronise les données du volume de destination vers le volume source, consultez la http://["Guide rapide de reprise après incident de volumes ONTAP 9"^].
 
 
 

@@ -78,7 +78,7 @@ Une fois Cloud Manager activé, vous pouvez commencer à déployer Cloud Volumes
 
 link:task_getting_started_aws.html["Mise en route dans AWS"] et link:task_getting_started_azure.html["Mise en route dans Azure"] Instructions pour une mise en service rapide de Cloud Volumes ONTAP. Pour obtenir de l'aide supplémentaire, reportez-vous aux documents suivants :
 
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Configurations prises en charge pour Cloud Volumes ONTAP 9.5"^]
+* https://["Configurations prises en charge pour Cloud Volumes ONTAP 9.5"^]
 * link:task_planning_your_config.html["Planification de votre configuration"]
 * link:task_deploying_otc_aws.html["Lancement d'Cloud Volumes ONTAP dans AWS"]
 * link:task_deploying_otc_azure.html["Lancement d'Cloud Volumes ONTAP dans Azure"]
