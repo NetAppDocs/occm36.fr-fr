@@ -57,7 +57,7 @@ Vous devez choisir le disque qui répond à vos besoins en termes de performance
 ** Les disques durs à froid sont conçus pour les sauvegardes, ou les données rarement accessibles, car les performances sont très faibles. Tout comme les disques HDD optimisés en termes de débit, les performances sont définies en termes de débit.
 
 
-Pour plus de détails, reportez-vous à http://["Documentation AWS : types de volume EBS"^].
+Pour plus de détails, reportez-vous à http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
 
 |===
 +
@@ -86,7 +86,7 @@ Vous devez choisir le disque qui répond à vos besoins en termes de performance
 ** Débit Les disques HDD optimisés sont destinés aux charges de travail fréquemment utilisées qui nécessitent un débit rapide et cohérent.
 
 
-Pour plus de détails, reportez-vous à http://["Documentation AWS : types de volume EBS"^].
+Pour plus de détails, reportez-vous à http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["Documentation AWS : types de volume EBS"^].
 
 
 
@@ -99,7 +99,7 @@ Pour plus de détails, reportez-vous à http://["Documentation AWS : types de vo
 | IP flottante | Les adresses IP doivent se trouver en dehors du bloc CIDR pour tous les VPC de la région. 
 
 
-| Table de routage | Si vous disposez de plusieurs tables de routage, il est très important de sélectionner les tables de routage correctes. Dans le cas contraire, certains clients n'ont peut-être pas accès à la paire haute disponibilité. Pour plus de détails, reportez-vous à  http://["Documentation AWS : tables de routage"^]. 
+| Table de routage | Si vous disposez de plusieurs tables de routage, il est très important de sélectionner les tables de routage correctes. Dans le cas contraire, certains clients n'ont peut-être pas accès à la paire haute disponibilité. Pour plus de détails, reportez-vous à  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentation AWS : tables de routage"^]. 
 |===
 +
 L'image suivante montre la page Noeuds and Mediator. Chaque instance se trouve dans une zone de disponibilité distincte.

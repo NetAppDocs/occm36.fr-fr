@@ -32,9 +32,9 @@ Cloud Manager met à jour les coûts lorsque vous actualisez la page. Vous devez
 "ce:GetTags"
 ----
 +
-Ces actions sont incluses dans la dernière https://["Politique de Cloud Manager"^]. Les nouveaux systèmes déployés à partir de NetApp Cloud Central incluent automatiquement ces autorisations.
+Ces actions sont incluses dans la dernière https://mysupport.netapp.com/cloudontap/iampolicies["Politique de Cloud Manager"^]. Les nouveaux systèmes déployés à partir de NetApp Cloud Central incluent automatiquement ces autorisations.
 
-.. https://["Activer la balise *WorkingEnvironnement*"^].
+.. https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html["Activer la balise *WorkingEnvironnement*"^].
 +
 Pour suivre vos coûts AWS, Cloud Manager attribue une balise d'allocation des coûts aux instances Cloud Volumes ONTAP. Après avoir créé votre premier environnement de travail, activez la balise *WorkingEnvironment,Id*. Les balises définies par l'utilisateur n'apparaissent pas dans les rapports de facturation AWS tant que vous ne les activez pas dans la console de facturation et de gestion des coûts.
 

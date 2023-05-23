@@ -50,7 +50,7 @@ Certains champs de cette page sont explicites. Le tableau suivant décrit les ch
 | Nom de l'environnement de travail | Cloud Manager utilise le nom de l'environnement de travail pour nommer à la fois le système Cloud Volumes ONTAP et l'instance Amazon EC2. Il utilise également le nom comme préfixe pour le groupe de sécurité prédéfini, si vous sélectionnez cette option. 
 
 
-| Ajouter des étiquettes | Les étiquettes AWS sont des métadonnées pour vos ressources AWS. Cloud Manager ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Vous pouvez ajouter jusqu'à quatre balises à partir de l'interface utilisateur lors de la création d'un environnement de travail, puis en ajouter d'autres après sa création. Notez que l'API ne vous limite pas à quatre balises lors de la création d'un environnement de travail. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://["Documentation AWS : balisage des ressources Amazon EC2"^]. 
+| Ajouter des étiquettes | Les étiquettes AWS sont des métadonnées pour vos ressources AWS. Cloud Manager ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Vous pouvez ajouter jusqu'à quatre balises à partir de l'interface utilisateur lors de la création d'un environnement de travail, puis en ajouter d'autres après sa création. Notez que l'API ne vous limite pas à quatre balises lors de la création d'un environnement de travail. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentation AWS : balisage des ressources Amazon EC2"^]. 
 
 
 | Informations d'identification | Il s'agit des informations d'identification du compte d'administration du cluster Cloud Volumes ONTAP. Vous pouvez utiliser ces informations d'identification pour vous connecter à Cloud Volumes ONTAP via OnCommand System Manager ou sa CLI. 
@@ -89,7 +89,7 @@ Si vous choisissez l'un des packages, vous n'avez qu'à spécifier un volume, pu
 
 . Sur la page IAM Role (Rôle IAM), vous devez conserver l'option par défaut pour permettre à Cloud Manager de créer le rôle qui vous convient.
 +
-Si vous préférez utiliser votre propre police, elle doit satisfaire http://["Configuration requise pour les nœuds Cloud Volumes ONTAP"^].
+Si vous préférez utiliser votre propre police, elle doit satisfaire http://mysupport.netapp.com/cloudontap/support/iampolicies["Configuration requise pour les nœuds Cloud Volumes ONTAP"^].
 
 . Sur la page licences, modifiez la version de Cloud Volumes ONTAP selon vos besoins, sélectionnez une licence, un type d'instance, la location d'instance, puis cliquez sur *Continuer*.
 +
@@ -192,7 +192,7 @@ Cloud Manager lance l'instance Cloud Volumes ONTAP. Vous pouvez suivre la progre
 
 Si vous rencontrez des problèmes lors du lancement de l'instance Cloud Volumes ONTAP, consultez le message d'échec. Vous pouvez également sélectionner l'environnement de travail et cliquer sur Re-create environment.
 
-Pour obtenir de l'aide supplémentaire, consultez la page https://["Prise en charge de NetApp Cloud Volumes ONTAP"^].
+Pour obtenir de l'aide supplémentaire, consultez la page https://mysupport.netapp.com/cloudontap["Prise en charge de NetApp Cloud Volumes ONTAP"^].
 
 .Une fois que vous avez terminé
 * Si vous avez provisionné un partage CIFS, donnez aux utilisateurs ou aux groupes des autorisations sur les fichiers et les dossiers et vérifiez que ces utilisateurs peuvent accéder au partage et créer un fichier.
@@ -236,7 +236,7 @@ Certains champs de cette page sont explicites. Le tableau suivant décrit les ch
 | Nom de l'environnement de travail | Cloud Manager utilise le nom de l'environnement de travail pour nommer à la fois le système Cloud Volumes ONTAP et l'instance Amazon EC2. Il utilise également le nom comme préfixe pour le groupe de sécurité prédéfini, si vous sélectionnez cette option. 
 
 
-| Ajouter des étiquettes | Les étiquettes AWS sont des métadonnées pour vos ressources AWS. Cloud Manager ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://["Documentation AWS : balisage des ressources Amazon EC2"^]. 
+| Ajouter des étiquettes | Les étiquettes AWS sont des métadonnées pour vos ressources AWS. Cloud Manager ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentation AWS : balisage des ressources Amazon EC2"^]. 
 
 
 | Informations d'identification | Il s'agit des informations d'identification du compte d'administration du cluster Cloud Volumes ONTAP. Vous pouvez utiliser ces informations d'identification pour vous connecter à Cloud Volumes ONTAP via OnCommand System Manager ou sa CLI. 
@@ -263,7 +263,7 @@ Les adresses IP doivent se trouver en dehors du bloc CIDR pour tous les VPC de l
 
 . Si vous choisissez plusieurs AZS, sélectionnez les tables de routage qui doivent inclure des routes vers les adresses IP flottantes, puis cliquez sur *Continuer*.
 +
-Si vous disposez de plusieurs tables de routage, il est très important de sélectionner les tables de routage correctes. Dans le cas contraire, certains clients n'ont peut-être pas accès à la paire Cloud Volumes ONTAP HA. Pour plus d'informations sur les tables de routage, voir http://["Documentation AWS : tables de routage"^].
+Si vous disposez de plusieurs tables de routage, il est très important de sélectionner les tables de routage correctes. Dans le cas contraire, certains clients n'ont peut-être pas accès à la paire Cloud Volumes ONTAP HA. Pour plus d'informations sur les tables de routage, voir http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentation AWS : tables de routage"^].
 
 . Sur la page Data Encryption, choisissez aucun chiffrement de données ou chiffrement géré par AWS.
 +
@@ -288,7 +288,7 @@ Si vous choisissez l'un des packages, vous n'avez qu'à spécifier un volume, pu
 
 . Sur la page IAM Role (Rôle IAM), vous devez conserver l'option par défaut pour permettre à Cloud Manager de créer les rôles pour vous.
 +
-Si vous préférez utiliser votre propre police, elle doit satisfaire http://["Configuration requise pour les nœuds Cloud Volumes ONTAP et le médiateur HA"^].
+Si vous préférez utiliser votre propre police, elle doit satisfaire http://mysupport.netapp.com/cloudontap/support/iampolicies["Configuration requise pour les nœuds Cloud Volumes ONTAP et le médiateur HA"^].
 
 . Sur la page licences, modifiez la version de Cloud Volumes ONTAP selon vos besoins, sélectionnez une licence, un type d'instance, la location d'instance, puis cliquez sur *Continuer*.
 +
@@ -388,7 +388,7 @@ Cloud Manager lance la paire Cloud Volumes ONTAP HA. Vous pouvez suivre la progr
 
 Si vous rencontrez des problèmes lors du lancement de la paire HA, consultez le message d'échec. Vous pouvez également sélectionner l'environnement de travail et cliquer sur Re-create environment.
 
-Pour obtenir de l'aide supplémentaire, consultez la page https://["Prise en charge de NetApp Cloud Volumes ONTAP"^].
+Pour obtenir de l'aide supplémentaire, consultez la page https://mysupport.netapp.com/cloudontap["Prise en charge de NetApp Cloud Volumes ONTAP"^].
 
 .Une fois que vous avez terminé
 * Si vous avez provisionné un partage CIFS, donnez aux utilisateurs ou aux groupes des autorisations sur les fichiers et les dossiers et vérifiez que ces utilisateurs peuvent accéder au partage et créer un fichier.

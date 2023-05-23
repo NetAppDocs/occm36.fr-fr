@@ -35,7 +35,7 @@ Cette étape est importante car Cloud Manager ne peut pas déployer Cloud Volume
 Lorsque vous déployez Cloud Manager à partir de NetApp Cloud Central, vous devez utiliser un compte Azure disposant des autorisations nécessaires pour déployer la machine virtuelle Cloud Manager.
 
 [role="quick-margin-list"]
-. Téléchargez le https://["Politique NetApp Cloud Central pour Azure"^].
+. Téléchargez le https://mysupport.netapp.com/cloudontap/iampolicies["Politique NetApp Cloud Central pour Azure"^].
 . Modifiez le fichier JSON en ajoutant votre ID d'abonnement Azure au champ " AssignableScopes ".
 . Utilisez le fichier JSON pour créer un rôle personnalisé dans Azure nommé _Azure SetupAsService_.
 +
@@ -49,7 +49,7 @@ Exemple : *az role definition create --role-definition C:\Policy_for_Setup_as_Se
 === image:number3.png["Numéro 3"] Lancez Cloud Manager à partir de NetApp Cloud Central
 
 [role="quick-margin-para"]
-Le logiciel Cloud Manager est requis pour déployer et gérer Cloud Volumes ONTAP. Quelques minutes suffisent pour lancer une instance Cloud Manager à partir de https://["Cloud Central"^].
+Le logiciel Cloud Manager est requis pour déployer et gérer Cloud Volumes ONTAP. Quelques minutes suffisent pour lancer une instance Cloud Manager à partir de https://cloud.netapp.com["Cloud Central"^].
 
 
 

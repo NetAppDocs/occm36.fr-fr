@@ -50,7 +50,7 @@ Le tableau suivant décrit les champs pour lesquels vous pouvez avoir besoin de 
 | Nom du groupe de ressources | Si vous décochez la case *utiliser par défaut*, vous pouvez entrer le nom d'un nouveau groupe de ressources. Si vous souhaitez utiliser un groupe de ressources existant, vous devez utiliser l'API. 
 
 
-| Étiquettes | Les étiquettes sont des métadonnées pour vos ressources Azure. Cloud Manager ajoute les balises au système Cloud Volumes ONTAP et à chaque ressource Azure associée au système. Vous pouvez ajouter jusqu'à quatre balises à partir de l'interface utilisateur lors de la création d'un environnement de travail, puis en ajouter d'autres après sa création. Notez que l'API ne vous limite pas à quatre balises lors de la création d'un environnement de travail. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://["Documentation Microsoft Azure : utilisation des balises pour organiser vos ressources Azure"^]. 
+| Étiquettes | Les étiquettes sont des métadonnées pour vos ressources Azure. Cloud Manager ajoute les balises au système Cloud Volumes ONTAP et à chaque ressource Azure associée au système. Vous pouvez ajouter jusqu'à quatre balises à partir de l'interface utilisateur lors de la création d'un environnement de travail, puis en ajouter d'autres après sa création. Notez que l'API ne vous limite pas à quatre balises lors de la création d'un environnement de travail. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://azure.microsoft.com/documentation/articles/resource-group-using-tags/["Documentation Microsoft Azure : utilisation des balises pour organiser vos ressources Azure"^]. 
 
 
 | Informations d'identification | Il s'agit des informations d'identification du compte d'administration du cluster Cloud Volumes ONTAP. Vous pouvez utiliser ces informations d'identification pour vous connecter à Cloud Volumes ONTAP via OnCommand System Manager ou sa CLI. 
@@ -177,7 +177,7 @@ Cloud Manager déploie le système Cloud Volumes ONTAP. Vous pouvez suivre la pr
 
 Si vous rencontrez des problèmes lors du déploiement du système Cloud Volumes ONTAP, consultez le message d'échec. Vous pouvez également sélectionner l'environnement de travail et cliquer sur *recréer l'environnement*.
 
-Pour obtenir de l'aide supplémentaire, consultez la page https://["Prise en charge de NetApp Cloud Volumes ONTAP"^].
+Pour obtenir de l'aide supplémentaire, consultez la page https://mysupport.netapp.com/cloudontap["Prise en charge de NetApp Cloud Volumes ONTAP"^].
 
 .Une fois que vous avez terminé
 * Si vous avez provisionné un partage CIFS, donnez aux utilisateurs ou aux groupes des autorisations sur les fichiers et les dossiers et vérifiez que ces utilisateurs peuvent accéder au partage et créer un fichier.

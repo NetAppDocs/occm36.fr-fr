@@ -16,11 +16,11 @@ summary: 'Vous pouvez obtenir de l"aide et obtenir plus d"informations sur Cloud
 [role="lead"]
 Vous pouvez obtenir de l'aide et obtenir plus d'informations sur Cloud Manager et Cloud Volumes ONTAP grâce à diverses ressources, notamment des vidéos, des forums et un support.
 
-* https://["Vidéos pour Cloud Manager et Cloud Volumes ONTAP"^]
+* https://www.youtube.com/playlist?list=PLdXI3bZJEw7lnoRo8FBKsX1zHbK8AQOoT["Vidéos pour Cloud Manager et Cloud Volumes ONTAP"^]
 +
 Regardez des vidéos qui vous montrent comment déployer et gérer Cloud Volumes ONTAP dans AWS et Azure et comment répliquer des données sur votre cloud hybride.
 
-* http://["Stratégies pour Cloud Manager"^]
+* http://mysupport.netapp.com/cloudontap/support/iampolicies["Stratégies pour Cloud Manager"^]
 +
 Téléchargez les fichiers JSON qui incluent les autorisations dont Cloud Manager a besoin pour effectuer des actions dans AWS et Azure.
 
@@ -30,41 +30,41 @@ Consultez un aperçu des API, des exemples d'utilisation et une référence API.
 
 * Formation pour Cloud Volumes ONTAP
 +
-** https://["Notions fondamentales de Cloud Volumes ONTAP"^]
-** https://["Cloud Volumes ONTAP : déploiement et gestion pour Azure"^]
+** https://learningcenter.netapp.com/LC?ObjectType=WBT&ObjectID=00368390["Notions fondamentales de Cloud Volumes ONTAP"^]
+** https://learningcenter.netapp.com/LC?ObjectType=WBT&ObjectID=00369436["Cloud Volumes ONTAP : déploiement et gestion pour Azure"^]
 
 
 * Rapports techniques
 +
-** https://["Rapport technique NetApp 4383 : caractérisation des performances de Cloud Volumes ONTAP dans Amazon Web Services avec des charges de travail applicatives"^]
-** https://["Rapport technique NetApp 4671 : caractérisation des performances de Cloud Volumes ONTAP dans Azure avec les charges de travail applicatives"^]
+** https://www.netapp.com/us/media/tr-4383.pdf["Rapport technique NetApp 4383 : caractérisation des performances de Cloud Volumes ONTAP dans Amazon Web Services avec des charges de travail applicatives"^]
+** https://www.netapp.com/us/media/tr-4671.pdf["Rapport technique NetApp 4671 : caractérisation des performances de Cloud Volumes ONTAP dans Azure avec les charges de travail applicatives"^]
 
 
-* https://["Cloud Volumes ONTAP 9 Guide Express de préparation à la reprise après incident SVM"^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Cloud Volumes ONTAP 9 Guide Express de préparation à la reprise après incident SVM"^]
 +
 Décrit comment configurer rapidement un SVM de destination en vue de la reprise après incident.
 
-* https://["Cloud Volumes ONTAP 9 SVM Disaster Recovery Express Guide"^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["Cloud Volumes ONTAP 9 SVM Disaster Recovery Express Guide"^]
 +
 Décrit comment activer rapidement une SVM de destination après un incident, puis réactiver la SVM source.
 
-* http://["Centre de documentation ONTAP 9"^]
+* http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^]
 +
 Accédez à la documentation produit d'ONTAP, qui peut vous aider à utiliser Cloud Volumes ONTAP.
 
-* https://["Prise en charge de NetApp Cloud Volumes ONTAP"^]
+* https://mysupport.netapp.com/cloudontap["Prise en charge de NetApp Cloud Volumes ONTAP"^]
 +
 Accédez aux ressources de support pour obtenir de l'aide et résoudre les problèmes liés à Cloud Volumes ONTAP.
 
-* https://["Communauté NetApp : services de données cloud"^]
+* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["Communauté NetApp : services de données cloud"^]
 +
 Connectez-vous avec vos pairs, posez des questions, échangez des idées, trouvez des ressources et partagez les meilleures pratiques.
 
-* http://["NetApp Cloud Central"^]
+* http://cloud.netapp.com/["NetApp Cloud Central"^]
 +
 Trouvez des informations sur d'autres produits et solutions NetApp pour le cloud.
 
-* http://["Documentation produit NetApp"^]
+* http://docs.netapp.com["Documentation produit NetApp"^]
 +
 Recherchez des instructions, des ressources et des réponses dans la documentation produit NetApp.
 

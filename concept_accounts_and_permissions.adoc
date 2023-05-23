@@ -26,7 +26,7 @@ Vous pouvez déployer tous les systèmes Cloud Volumes ONTAP sur le compte AWS i
 
 === Compte AWS initial
 
-Lorsque vous déployez Cloud Manager depuis NetApp Cloud Central, vous devez utiliser un compte AWS avec des autorisations pour lancer l'instance Cloud Manager. Les autorisations requises sont répertoriées dans le https://["Politique NetApp Cloud Central pour AWS"^].
+Lorsque vous déployez Cloud Manager depuis NetApp Cloud Central, vous devez utiliser un compte AWS avec des autorisations pour lancer l'instance Cloud Manager. Les autorisations requises sont répertoriées dans le https://mysupport.netapp.com/cloudontap/iampolicies["Politique NetApp Cloud Central pour AWS"^].
 
 Lorsque Cloud Central lance l'instance Cloud Manager dans AWS, il crée un rôle IAM et un profil d'instance pour l'instance. Il attache également une règle qui fournit les autorisations nécessaires à cloud Manager pour déployer et gérer Cloud Volumes ONTAP dans ce compte AWS. link:reference_permissions.html#what-cloud-manager-does-with-aws-permissions["Examinez comment Cloud Manager utilise les autorisations"].
 
@@ -60,9 +60,9 @@ Vous pouvez déployer tous les systèmes Cloud Volumes ONTAP sur le compte Azure
 
 === Compte Azure initial
 
-Lorsque vous déployez Cloud Manager à partir de NetApp Cloud Central, vous devez utiliser un compte Azure disposant des autorisations nécessaires pour déployer la machine virtuelle Cloud Manager. Les autorisations requises sont répertoriées dans le https://["Politique NetApp Cloud Central pour Azure"^].
+Lorsque vous déployez Cloud Manager à partir de NetApp Cloud Central, vous devez utiliser un compte Azure disposant des autorisations nécessaires pour déployer la machine virtuelle Cloud Manager. Les autorisations requises sont répertoriées dans le https://mysupport.netapp.com/cloudontap/iampolicies["Politique NetApp Cloud Central pour Azure"^].
 
-Lorsque Cloud Central déploie la machine virtuelle Cloud Manager dans Azure, il active une https://["identité gérée attribuée par le système"^] Sur la machine virtuelle Cloud Manager, crée un rôle personnalisé et le attribue à la machine virtuelle. Le rôle fournit à Cloud Manager les autorisations de déploiement et de gestion de Cloud Volumes ONTAP dans cet abonnement Azure. link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Examinez comment Cloud Manager utilise les autorisations"].
+Lorsque Cloud Central déploie la machine virtuelle Cloud Manager dans Azure, il active une https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identité gérée attribuée par le système"^] Sur la machine virtuelle Cloud Manager, crée un rôle personnalisé et le attribue à la machine virtuelle. Le rôle fournit à Cloud Manager les autorisations de déploiement et de gestion de Cloud Volumes ONTAP dans cet abonnement Azure. link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Examinez comment Cloud Manager utilise les autorisations"].
 
 image:diagram_permissions_initial_azure.png["Image conceptuelle qui montre Cloud Central déployant Cloud Manager dans un compte Azure et un abonnement. Une identité gérée attribuée par le système est activée et un rôle personnalisé est attribué à la machine virtuelle Cloud Manager."]
 

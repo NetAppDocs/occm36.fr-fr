@@ -36,7 +36,7 @@ Cloud Manager est pris en charge sur les versions anglaises de ces systèmes d'e
 
 
 --
-Hyperviseur:: Un hyperviseur bare Metal ou hébergé certifié pour exécuter CentOS ou Red Hat Enterprise Linuxhttps://["Solution Red Hat : quels hyperviseurs sont certifiés pour l'exécution de Red Hat Enterprise Linux ?"^]
+Hyperviseur:: Un hyperviseur bare Metal ou hébergé certifié pour exécuter CentOS ou Red Hat Enterprise Linuxhttps://access.redhat.com/certified-hypervisors["Solution Red Hat : quels hyperviseurs sont certifiés pour l'exécution de Red Hat Enterprise Linux ?"^]
 CPU:: 2,27 GHz ou plus avec deux cœurs
 RAM:: 4 Go
 Espace disque disponible:: 50 Go

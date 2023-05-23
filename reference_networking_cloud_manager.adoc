@@ -53,7 +53,7 @@ Services AWS (amazonaws.com):
 * Service de stockage simple (S3)
 
 
-Le noeud final exact dépend de la région dans laquelle vous déployez Cloud Volumes ONTAP. https://["Reportez-vous à la documentation AWS pour plus de détails."^]
+Le noeud final exact dépend de la région dans laquelle vous déployez Cloud Volumes ONTAP. https://docs.aws.amazon.com/general/latest/gr/rande.html["Reportez-vous à la documentation AWS pour plus de détails."^]
 | Permet à Cloud Manager de déployer et de gérer Cloud Volumes ONTAP dans AWS. 
 
 

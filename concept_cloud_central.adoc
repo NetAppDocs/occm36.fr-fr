@@ -14,7 +14,7 @@ summary: NetApp Cloud Central fournit un emplacement centralisé pour accéder a
 
 
 [role="lead"]
-https://["NetApp Cloud Central"^] Cette solution est centralisée pour accéder aux services de données cloud NetApp et les gérer. Ces services vous permettent d'exécuter des applications stratégiques dans le cloud, de créer des sites de reprise après incident automatisés, de sauvegarder vos données SaaS et de migrer et contrôler efficacement les données sur plusieurs clouds.
+https://cloud.netapp.com["NetApp Cloud Central"^] Cette solution est centralisée pour accéder aux services de données cloud NetApp et les gérer. Ces services vous permettent d'exécuter des applications stratégiques dans le cloud, de créer des sites de reprise après incident automatisés, de sauvegarder vos données SaaS et de migrer et contrôler efficacement les données sur plusieurs clouds.
 
 L'intégration de Cloud Manager avec NetApp Cloud Central offre plusieurs avantages, notamment une expérience de déploiement simplifiée, un emplacement unique pour afficher et gérer plusieurs systèmes Cloud Manager et une authentification utilisateur centralisée.
 

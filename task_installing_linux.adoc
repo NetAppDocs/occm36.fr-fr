@@ -39,9 +39,9 @@ Si vous recevez un message indiquant que l'installation de awscli a échoué, vo
 
 
 . Révision link:reference_cloud_mgr_reqs.html["Conditions de l'hôte Cloud Manager"].
-. Téléchargez le logiciel à partir du http://["Site de support NetApp"^], Puis copiez-le sur l'hôte Linux.
+. Téléchargez le logiciel à partir du http://mysupport.netapp.com/NOW/cgi-bin/software["Site de support NetApp"^], Puis copiez-le sur l'hôte Linux.
 +
-Pour obtenir de l'aide sur la connexion et la copie du fichier vers une instance EC2 dans AWS, reportez-vous à la section http://["Documentation AWS : connexion à votre instance Linux à l'aide de SSH"^].
+Pour obtenir de l'aide sur la connexion et la copie du fichier vers une instance EC2 dans AWS, reportez-vous à la section http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html["Documentation AWS : connexion à votre instance Linux à l'aide de SSH"^].
 
 . Attribuez des autorisations pour exécuter le script.
 +
@@ -81,13 +81,13 @@ Cloud Manager est maintenant installé. À la fin de l'installation, le service 
 
 . Ouvrez un navigateur Web et entrez l'URL suivante :
 +
-https://[]
+https://_ipaddress_:__port__[]
 
 +
 _Ipaddress_ peut être localhost, une adresse IP privée ou une adresse IP publique, selon la configuration de l'hôte Cloud Manager. Par exemple, si Cloud Manager se trouve dans le cloud public sans adresse IP publique, vous devez entrer une adresse IP privée à partir d'un hôte disposant d'une connexion à l'hôte Cloud Manager.
 
 +
-_Port_ est nécessaire si vous avez modifié les ports HTTP (80) ou HTTPS (443) par défaut. Par exemple, si le port HTTPS a été modifié en 8443, vous pouvez entrer https://[]
+_Port_ est nécessaire si vous avez modifié les ports HTTP (80) ou HTTPS (443) par défaut. Par exemple, si le port HTTPS a été modifié en 8443, vous pouvez entrer https://_ipaddress_:8443[]
 
 . Inscrivez-vous à un compte NetApp Cloud Central ou connectez-vous si vous en possédez déjà un.
 . Lorsque vous vous inscrivez ou que vous vous connectez, Cloud Manager ajoute automatiquement votre compte utilisateur en tant qu'administrateur de ce système.

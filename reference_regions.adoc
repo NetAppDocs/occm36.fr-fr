@@ -16,4 +16,4 @@ summary: Cloud Manager et Cloud Volumes ONTAP sont pris en charge dans un certai
 [role="lead"]
 Cloud Manager et Cloud Volumes ONTAP sont pris en charge dans un certain nombre de régions AWS et Microsoft Azure.
 
-https://["Cliquez ici pour afficher la liste des régions prises en charge"^].
+https://cloud.netapp.com/cloud-volumes-global-regions["Cliquez ici pour afficher la liste des régions prises en charge"^].

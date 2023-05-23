@@ -14,7 +14,7 @@ summary: 'Vous pouvez synchroniser les données des volumes ONTAP vers un compar
 
 
 [role="lead"]
-Vous pouvez synchroniser les données des volumes ONTAP vers un compartiment AWS S3 en intégrant un environnement de travail avec https://["NetApp Cloud Sync"^]. Vous pouvez ensuite utiliser les données synchronisées comme copie secondaire ou pour le traitement des données à l'aide de services AWS tels que EMR et Redshift.
+Vous pouvez synchroniser les données des volumes ONTAP vers un compartiment AWS S3 en intégrant un environnement de travail avec https://www.netapp.com/us/cloud/data-sync-saas-product-details["NetApp Cloud Sync"^]. Vous pouvez ensuite utiliser les données synchronisées comme copie secondaire ou pour le traitement des données à l'aide de services AWS tels que EMR et Redshift.
 
 
 
