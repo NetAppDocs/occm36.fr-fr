@@ -209,7 +209,5 @@ sidebar:
       url: "/reference_user_roles.html"
     - title: Liens connexes
       url: "/reference_additional_info.html"
-  - title: Versions antérieures
-    url: "/reference_earlier_versions.html"
   - title: Mentions légales
     url: "/reference_legal_notices.html"
