@@ -60,16 +60,6 @@
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">Cliquez sur *Enregistrer*.</block>
   <block id="14a3ec4432f577b0adffd0ed91b508cd" category="list-text">Si vous souhaitez déployer Cloud Volumes ONTAP à partir d'abonnements supplémentaires, passez à cet abonnement, puis répétez ces étapes.</block>
   <block id="7779b312fd40e7f87a07a163ad307820" category="paragraph">Cloud Manager dispose désormais des autorisations dont il a besoin pour déployer et gérer Cloud Volumes ONTAP dans Azure.</block>
-  <block id="bf247a42035ccb395566620f801451c6" category="summary">La documentation des versions précédentes de Cloud Manager est disponible si vous n'utilisez pas la dernière version.</block>
-  <block id="07d55193182697e6721a80930a82f737" category="doc">Versions antérieures de la documentation de Cloud Manager</block>
-  <block id="ecc216112e51b5fcf9a16ded8dabf7d3" category="inline-link">Cloud Manager 3.5</block>
-  <block id="cfc918b9915ac614a17310f450bf2721" category="list-text"><block ref="cfc918b9915ac614a17310f450bf2721" category="inline-link-rx"></block></block>
-  <block id="e3d94d1f3408c8379bdf78d363454ce1" category="inline-link">Cloud Manager 3.4</block>
-  <block id="38de804ea38bf38231c886d96da268e7" category="list-text"><block ref="38de804ea38bf38231c886d96da268e7" category="inline-link-rx"></block></block>
-  <block id="071d13764bfb9458bd760c388f1767ba" category="inline-link">Cloud Manager 3.3</block>
-  <block id="16402a155f06e6eb36ecc0f5c23fe0c3" category="list-text"><block ref="16402a155f06e6eb36ecc0f5c23fe0c3" category="inline-link-rx"></block></block>
-  <block id="5762b1cbe884ee9e94cfac52c83c4e93" category="inline-link">Cloud Manager 3.2</block>
-  <block id="512d31465e67eb0eaa423ce8c234959e" category="list-text"><block ref="512d31465e67eb0eaa423ce8c234959e" category="inline-link-rx"></block></block>
   <block id="0b6e2ff3f54e08d0974d92f95f63ff71" category="summary">Par défaut, Cloud Manager utilise un certificat auto-signé pour l'accès HTTPS à la console Web. Vous pouvez installer un certificat signé par une autorité de certification (CA), qui offre une meilleure protection de la sécurité qu'un certificat auto-signé.</block>
   <block id="e34a84bb6709c8ccbc99bb1b42abc7c5" category="doc">Installation d'un certificat HTTPS pour un accès sécurisé</block>
   <block id="def873897c7aec24f62b91c44e802e9a" category="list-text">Dans le coin supérieur droit de la console Cloud Manager, cliquez sur la liste déroulante des tâches, puis sélectionnez *HTTPS Setup*.</block>
@@ -3182,7 +3172,6 @@
   <block id="f90e6605f3b61632417dd0fa03f7a25f" category="sidebar">Forum aux questions sur l'intégration de Cloud Central</block>
   <block id="75396e001838965f1f26327de3cf6d73" category="sidebar">Configurations prises en charge pour Cloud Volumes ONTAP</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="sidebar">Autorisations</block>
-  <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">Versions antérieures</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Résultat</block>
   <block id="9b1146da7e8885b360bcba1784bf6d6c" category="inline-image-macro">Numéro 1</block>
   <block id="1323d5a65678d7001c29460122ccc820" category="section-title"><block ref="dfda45ebcbf64ca08d06a80353e9cf6f" category="inline-image-macro-rx" type="image"></block> Vérifiez la connectivité réseau</block>
@@ -3203,4 +3192,8 @@
   <block id="832eb2addfeb7baf5b285a22aaeb4161" category="section-title"><block ref="b496ee93dbdd8d3b796a1af3fe777064" category="inline-image-macro-rx" type="image"></block> Fournissez les autorisations Azure requises</block>
   <block id="55656479963c4d6faa53aa52af17bb58" category="section-title"><block ref="f99fa24d03c6ef96c556af7cdf23810f" category="inline-image-macro-rx" type="image"></block> Lancez Cloud Manager à partir de NetApp Cloud Central</block>
   <block id="fc6a1c4bfdea701c7028d4b2604689fb" category="section-title"><block ref="d0f5cff2b8e0ecc91e360a74276cf2dd" category="inline-image-macro-rx" type="image"></block> Lancez Cloud Volumes ONTAP à l'aide de Cloud Manager</block>
+  <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="section-title">BlueXP</block>
+  <block id="1514a9e798eb61fcbaf1fddb8eb82097" category="paragraph">NetApp BlueXP étend et améliore les fonctionnalités fournies via Cloud Manager.</block>
+  <block id="ab226d70455b3dcdb3cf804792103d43" category="inline-link">Consultez la documentation BlueXP</block>
+  <block id="50523074a17d5fe93be8e3f013a747de" category="paragraph"><block ref="50523074a17d5fe93be8e3f013a747de" category="inline-link-rx"></block></block>
 </blocks>
